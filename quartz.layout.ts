@@ -4,12 +4,11 @@ import * as Component from "./quartz/components"
 // components shared across all pages
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
-  header: [],
+  header: [Component.TopNav()],
   afterBody: [],
   footer: Component.Footer({
     links: {
-      GitHub: "https://github.com/jackyzha0/quartz",
-      "Discord Community": "https://discord.gg/cRFFHYye7t",
+      GitHub: "https://github.com/jazznoodlesstudio",
     },
   }),
 }
@@ -38,7 +37,21 @@ export const defaultContentPageLayout: PageLayout = {
         { Component: Component.ReaderMode() },
       ],
     }),
-    Component.Explorer(),
+    Component.Explorer({
+      title: "探索",
+      folderDefaultState: "collapsed",
+      sortFn: (a, b) => {
+        // Jazznoodles：側邊選單照主選單順序排
+        const order = ["technology", "product-business", "faith", "creative-studio", "travel", "lab", "notes", "about"]
+        const ia = order.indexOf(a.slugSegment)
+        const ib = order.indexOf(b.slugSegment)
+        if (ia !== -1 || ib !== -1) {
+          return (ia === -1 ? 99 : ia) - (ib === -1 ? 99 : ib)
+        }
+        if (a.isFolder !== b.isFolder) return a.isFolder ? -1 : 1
+        return a.displayName.localeCompare(b.displayName, undefined, { numeric: true, sensitivity: "base" })
+      },
+    }),
   ],
   right: [
     Component.Graph(),
@@ -62,7 +75,21 @@ export const defaultListPageLayout: PageLayout = {
         { Component: Component.Darkmode() },
       ],
     }),
-    Component.Explorer(),
+    Component.Explorer({
+      title: "探索",
+      folderDefaultState: "collapsed",
+      sortFn: (a, b) => {
+        // Jazznoodles：側邊選單照主選單順序排
+        const order = ["technology", "product-business", "faith", "creative-studio", "travel", "lab", "notes", "about"]
+        const ia = order.indexOf(a.slugSegment)
+        const ib = order.indexOf(b.slugSegment)
+        if (ia !== -1 || ib !== -1) {
+          return (ia === -1 ? 99 : ia) - (ib === -1 ? 99 : ib)
+        }
+        if (a.isFolder !== b.isFolder) return a.isFolder ? -1 : 1
+        return a.displayName.localeCompare(b.displayName, undefined, { numeric: true, sensitivity: "base" })
+      },
+    }),
   ],
   right: [],
 }

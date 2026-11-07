@@ -8,47 +8,45 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "Quartz 4",
+    pageTitle: "Jazznoodles.",
     pageTitleSuffix: "",
     enableSPA: true,
     enablePopovers: true,
-    analytics: {
-      provider: "plausible",
-    },
-    locale: "en-US",
-    baseUrl: "quartz.jzhao.xyz",
+    analytics: null,
+    locale: "zh-TW",
+    baseUrl: "jazznoodlesstudio.github.io/JazzNoodles",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "modified",
     theme: {
       fontOrigin: "googleFonts",
       cdnCaching: true,
       typography: {
-        header: "Schibsted Grotesk",
-        body: "Source Sans Pro",
+        header: "Nunito",
+        body: "Noto Sans TC",
         code: "IBM Plex Mono",
       },
       colors: {
         lightMode: {
-          light: "#faf8f8",
-          lightgray: "#e5e5e5",
-          gray: "#b8b8b8",
-          darkgray: "#4e4e4e",
-          dark: "#2b2b2b",
-          secondary: "#284b63",
-          tertiary: "#84a59d",
-          highlight: "rgba(143, 159, 169, 0.15)",
-          textHighlight: "#fff23688",
+          light: "#F8FAFF", // Cloud White 背景
+          lightgray: "#E3EBF8",
+          gray: "#9AAAC6",
+          darkgray: "#3C4A66",
+          dark: "#14284F", // 內文深藍
+          secondary: "#1E63D1", // Ocean Blue：Logo、連結、按鈕
+          tertiary: "#6FB6FF", // Sky Blue：hover
+          highlight: "rgba(111, 182, 255, 0.15)",
+          textHighlight: "#FFD16699", // Sunshine Yellow 螢光筆
         },
         darkMode: {
-          light: "#161618",
-          lightgray: "#393639",
-          gray: "#646464",
-          darkgray: "#d4d4d4",
-          dark: "#ebebec",
-          secondary: "#7b97aa",
-          tertiary: "#84a59d",
-          highlight: "rgba(143, 159, 169, 0.15)",
-          textHighlight: "#b3aa0288",
+          light: "#0D1B3A",
+          lightgray: "#1F3157",
+          gray: "#5C6E94",
+          darkgray: "#D5DEF0",
+          dark: "#F8FAFF",
+          secondary: "#6FB6FF",
+          tertiary: "#FFD166",
+          highlight: "rgba(111, 182, 255, 0.16)",
+          textHighlight: "#FFD16655",
         },
       },
     },
@@ -71,6 +69,7 @@ const config: QuartzConfig = {
       Plugin.TableOfContents(),
       Plugin.CrawlLinks({ markdownLinkResolution: "shortest" }),
       Plugin.Description(),
+      Plugin.FirstImageCover(), // Jazznoodles：文章列表卡片的封面
       Plugin.Latex({ renderEngine: "katex" }),
     ],
     filters: [Plugin.RemoveDrafts()],

@@ -1,3 +1,200 @@
 @use "./base.scss";
 
-// put your custom CSS here!
+// ===== Jazznoodles 品牌色 =====
+// Ocean Blue #1E63D1（主色）· Sky Blue #6FB6FF（輔助）· Cloud White #F8FAFF（背景）
+// Sunshine Yellow #FFD166（強調）· Dream Lavender #C7B8FF（點綴）
+:root {
+  --jn-ocean: #1e63d1;
+  --jn-sky: #6fb6ff;
+  --jn-cloud: #f8faff;
+  --jn-sun: #ffd166;
+  --jn-lavender: #c7b8ff;
+  --jn-sky-gradient: linear-gradient(90deg, #1e63d1, #6fb6ff);
+  --jn-warm-gradient: linear-gradient(90deg, #6fb6ff, #ffd166);
+}
+
+// ===== 首頁封面（整張圖）=====
+.hero-image {
+  position: relative;
+  margin: 0.5rem 0 2.5rem;
+  border-radius: 22px;
+  overflow: hidden;
+  background: var(--jn-sky-gradient);
+  box-shadow: 0 12px 32px rgba(30, 99, 209, 0.18);
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    border-radius: 0;
+  }
+
+  // 圖上「Personal Knowledge & Technology Brand →」按鈕的可點擊區域
+  a.hero-hotspot {
+    position: absolute;
+    left: 12.1%;
+    top: 51.7%;
+    width: 26.4%;
+    height: 5.1%;
+    border-radius: 999px;
+    background: transparent !important;
+    padding: 0 !important;
+    transition: box-shadow 0.2s, background 0.2s;
+    &:hover {
+      background: rgba(111, 182, 255, 0.25) !important;
+      box-shadow: 0 0 0 2px var(--jn-sky);
+    }
+  }
+}
+
+// ===== 導覽列：白底 =====
+.top-nav {
+  background: #ffffff;
+  border: 1px solid #e3ebf8 !important;
+  border-radius: 14px;
+  padding: 0.55rem 1rem !important;
+  gap: 0.4rem 1.05rem !important;
+}
+
+// ===== 首頁目錄卡片 =====
+.cat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+  margin: 1rem 0 2rem;
+}
+.cat-grid a.cat-card {
+  position: relative;
+  display: block;
+  padding: 1.25rem 1.2rem 1.2rem !important;
+  border-radius: 16px;
+  border: 1px solid #e3ebf8;
+  background: #ffffff !important;
+  color: var(--dark) !important;
+  text-decoration: none;
+  overflow: hidden;
+  transition: transform 0.15s, box-shadow 0.15s;
+  // 上緣色條：Sky Gradient
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 5px;
+    background: var(--jn-sky-gradient);
+  }
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 22px rgba(30, 99, 209, 0.16);
+    &::before { background: var(--jn-warm-gradient); }
+  }
+  .cat-name { display: block; font-weight: 700; font-size: 1.05rem; color: var(--jn-ocean); }
+  .cat-desc { display: block; margin-top: 0.3rem; font-size: 0.88rem; color: var(--darkgray); }
+}
+
+// ===== 主要按鈕：Ocean Blue，Hover：Sky Blue =====
+.jn-button,
+a.jn-button {
+  display: inline-block;
+  padding: 0.55rem 1.4rem !important;
+  border-radius: 999px;
+  background: var(--jn-ocean) !important;
+  color: #fff !important;
+  font-weight: 500;
+  transition: background 0.2s;
+  &:hover { background: var(--jn-sky) !important; }
+}
+
+// ===== 分類標籤：Lavender =====
+.tags a.tag-link,
+a.tag-link {
+  background-color: rgba(199, 184, 255, 0.35) !important;
+  color: #4b3a9a !important;
+  border-radius: 999px;
+  &:hover { background-color: var(--jn-lavender) !important; }
+}
+
+// ===== 重點文字：Sunshine Yellow =====
+// 黃色字放在白底上看不清楚，所以用「黃色螢光筆」的方式呈現：==重點== 或 <mark>
+mark,
+.text-highlight {
+  background: linear-gradient(transparent 55%, rgba(255, 209, 102, 0.75) 55%) !important;
+  color: inherit !important;
+  padding: 0 0.1em;
+}
+
+// 深色模式：白底元件改成深藍
+:root[saved-theme="dark"] {
+  .top-nav { background: var(--lightgray); border-color: var(--lightgray) !important; }
+  .cat-grid a.cat-card { background: var(--lightgray) !important; border-color: var(--lightgray); }
+  .cat-grid a.cat-card .cat-name { color: var(--jn-sky); }
+  a.tag-link { color: #e4ddff !important; }
+}
+
+// ===== 字體：英文用圓潤的 Nunito，中文用 Noto Sans TC =====
+:root:root {
+  --headerFont: "Nunito", "Noto Sans TC", sans-serif;
+  --bodyFont: "Noto Sans TC", sans-serif;
+}
+
+// ===== 左側選單：細字、柔和配色 =====
+.explorer {
+  font-family: "Nunito", "Noto Sans TC", sans-serif;
+
+  .explorer-content ul li {
+    margin: 0.1rem 0;
+  }
+  // 分類（資料夾）名稱
+  .folder-container div > a,
+  .folder-container div > button span {
+    font-family: "Nunito", "Noto Sans TC", sans-serif;
+    font-weight: 500 !important;
+    font-size: 0.95rem;
+    color: var(--dark) !important;
+    letter-spacing: 0.01em;
+  }
+  .folder-container div > a:hover,
+  .folder-container div > button:hover span {
+    color: var(--secondary) !important;
+  }
+  .folder-icon {
+    color: var(--gray) !important;
+    width: 14px;
+    height: 14px;
+  }
+  // 文章名稱
+  .explorer-content ul li > a {
+    font-weight: 400;
+    font-size: 0.88rem;
+    line-height: 1.55;
+    color: var(--darkgray) !important;
+    opacity: 1 !important;
+    background: none !important;
+    padding: 0.15rem 0 !important;
+    display: block;
+    &:hover { color: var(--secondary) !important; }
+    &.active {
+      color: var(--secondary) !important;
+      font-weight: 500;
+    }
+  }
+  .folder-outer > ul {
+    border-left: 1px solid #dfe8f7 !important;
+  }
+  // 「探索」標題
+  button.desktop-explorer h2,
+  button.mobile-explorer h2 {
+    font-weight: 600;
+    font-size: 0.8rem;
+    letter-spacing: 0.12em;
+    color: var(--gray);
+  }
+}
+
+// 首頁不顯示預設的文章標題與日期（封面圖已經有標題）
+body[data-slug="index"] .article-title,
+body[data-slug="index"] .content-meta {
+  display: none;
+}
