@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="590" viewBox="0 0 960 590" role="img" aria-label="交接包：接手方只看得到這張紙。用結構化欄位交代，不要整段貼對話原文">
+<title>交接包：接手方只看得到這張紙</title>
+<rect width="960" height="590" fill="#F4F1E9"/>
+<line x1="40" y1="26" x2="920" y2="26" stroke="#102B50" stroke-width="1" opacity="0.14"/>
+<line x1="40" y1="32" x2="920" y2="32" stroke="#102B50" stroke-width="1" opacity="0.14"/>
+<line x1="40" y1="38" x2="920" y2="38" stroke="#102B50" stroke-width="1" opacity="0.14"/>
+<line x1="40" y1="44" x2="920" y2="44" stroke="#102B50" stroke-width="1" opacity="0.14"/>
+<line x1="40" y1="50" x2="920" y2="50" stroke="#102B50" stroke-width="1" opacity="0.14"/>
+<rect x="40" y="70" width="10" height="34" fill="#D6A45B"/>
+<text x="64" y="98" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="30" font-weight="900" fill="#102B50" text-anchor="start">交接包：接手方只看得到這張紙</text>
+<text x="40" y="136" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="19" font-weight="400" fill="#51647D" text-anchor="start">用結構化欄位交代，不要整段貼對話原文</text>
+<rect x="40" y="210" width="210" height="100" rx="4" fill="#102B50"/>
+<text x="145.0" y="256.0" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="21" font-weight="700" fill="#F4F1E9" text-anchor="middle">Agent A</text>
+<text x="145.0" y="282.0" font-family="'JetBrains Mono','Consolas','Menlo',monospace" font-size="15" font-weight="400" fill="#F4F1E9" text-anchor="middle" opacity="0.85">看過全部對話</text>
+<line x1="256" y1="260" x2="306.0" y2="260.0" stroke="#102B50" stroke-width="2.5"/>
+<polygon points="318,260 306.0,253.0 306.0,267.0" fill="#102B50"/>
+<rect x="324" y="168" width="330" height="78" rx="4" fill="#D6A45B"/>
+<text x="489.0" y="203.0" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="21" font-weight="700" fill="#102B50" text-anchor="middle">背景</text>
+<text x="489.0" y="229.0" font-family="'JetBrains Mono','Consolas','Menlo',monospace" font-size="15" font-weight="400" fill="#102B50" text-anchor="middle" opacity="0.85">任務目標、使用者要什麼</text>
+<rect x="324" y="258" width="330" height="78" rx="4" fill="#8BAAC8"/>
+<text x="489.0" y="293.0" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="21" font-weight="700" fill="#102B50" text-anchor="middle">發現</text>
+<text x="489.0" y="319.0" font-family="'JetBrains Mono','Consolas','Menlo',monospace" font-size="15" font-weight="400" fill="#102B50" text-anchor="middle" opacity="0.85">查到什麼、做過什麼</text>
+<rect x="324" y="348" width="330" height="78" rx="4" fill="#B5483E"/>
+<text x="489.0" y="383.0" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="21" font-weight="700" fill="#F4F1E9" text-anchor="middle">已執行動作與授權</text>
+<text x="489.0" y="409.0" font-family="'JetBrains Mono','Consolas','Menlo',monospace" font-size="15" font-weight="400" fill="#F4F1E9" text-anchor="middle" opacity="0.85">例：已退款 600 元</text>
+<rect x="324" y="438" width="330" height="78" rx="4" fill="#3E5C85"/>
+<text x="489.0" y="473.0" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="21" font-weight="700" fill="#F4F1E9" text-anchor="middle">待決事項</text>
+<text x="489.0" y="499.0" font-family="'JetBrains Mono','Consolas','Menlo',monospace" font-size="15" font-weight="400" fill="#F4F1E9" text-anchor="middle" opacity="0.85">為什麼交出、要對方決定什麼</text>
+<line x1="660" y1="260" x2="710.0" y2="260.0" stroke="#102B50" stroke-width="2.5"/>
+<polygon points="722,260 710.0,253.0 710.0,267.0" fill="#102B50"/>
+<rect x="728" y="210" width="192" height="100" rx="4" fill="#102B50"/>
+<text x="824.0" y="256.0" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="21" font-weight="700" fill="#F4F1E9" text-anchor="middle">接手方</text>
+<text x="824.0" y="282.0" font-family="'JetBrains Mono','Consolas','Menlo',monospace" font-size="15" font-weight="400" fill="#F4F1E9" text-anchor="middle" opacity="0.85">只看交接包</text>
+<text x="40" y="566" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="18" font-weight="700" fill="#B5483E" text-anchor="start">沒寫進交接包的，對接手方就等於不存在</text>
+</svg>

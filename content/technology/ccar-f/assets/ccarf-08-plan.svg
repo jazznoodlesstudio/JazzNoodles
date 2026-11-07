@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="430" viewBox="0 0 960 430" role="img" aria-label="考前兩週。第 1 週補實作，第 2 週用題目找洞">
+<title>考前兩週</title>
+<rect width="960" height="430" fill="#F4F1E9"/>
+<line x1="40" y1="26" x2="920" y2="26" stroke="#102B50" stroke-width="1" opacity="0.14"/>
+<line x1="40" y1="32" x2="920" y2="32" stroke="#102B50" stroke-width="1" opacity="0.14"/>
+<line x1="40" y1="38" x2="920" y2="38" stroke="#102B50" stroke-width="1" opacity="0.14"/>
+<line x1="40" y1="44" x2="920" y2="44" stroke="#102B50" stroke-width="1" opacity="0.14"/>
+<line x1="40" y1="50" x2="920" y2="50" stroke="#102B50" stroke-width="1" opacity="0.14"/>
+<rect x="40" y="70" width="10" height="34" fill="#D6A45B"/>
+<text x="64" y="98" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="30" font-weight="900" fill="#102B50" text-anchor="start">考前兩週</text>
+<text x="40" y="136" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="19" font-weight="400" fill="#51647D" text-anchor="start">第 1 週補實作，第 2 週用題目找洞</text>
+<rect x="40" y="190" width="160" height="150" rx="4" fill="#102B50"/>
+<text x="54" y="226" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="17" font-weight="700" fill="#F4F1E9" text-anchor="start">第 1–2 天</text>
+<text x="54" y="272" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="22" font-weight="900" fill="#F4F1E9" text-anchor="start">01、02</text>
+<text x="54" y="306" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="15" font-weight="400" fill="#F4F1E9" text-anchor="start">迴圈・多 agent</text>
+<polygon points="203,255 217,265 203,275" fill="#102B50"/>
+<rect x="220" y="190" width="160" height="150" rx="4" fill="#D6A45B"/>
+<text x="234" y="226" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="17" font-weight="700" fill="#102B50" text-anchor="start">第 3–4 天</text>
+<text x="234" y="272" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="22" font-weight="900" fill="#102B50" text-anchor="start">03、04</text>
+<text x="234" y="306" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="15" font-weight="400" fill="#102B50" text-anchor="start">設定・探索與範圍</text>
+<polygon points="383,255 397,265 383,275" fill="#102B50"/>
+<rect x="400" y="190" width="160" height="150" rx="4" fill="#102B50"/>
+<text x="414" y="226" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="17" font-weight="700" fill="#F4F1E9" text-anchor="start">第 5–7 天</text>
+<text x="414" y="272" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="22" font-weight="900" fill="#F4F1E9" text-anchor="start">05、06、07</text>
+<text x="414" y="306" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="15" font-weight="400" fill="#F4F1E9" text-anchor="start">輸出・工具・可靠性</text>
+<polygon points="563,255 577,265 563,275" fill="#102B50"/>
+<rect x="580" y="190" width="160" height="150" rx="4" fill="#3E5C85"/>
+<text x="594" y="226" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="17" font-weight="700" fill="#F4F1E9" text-anchor="start">第 8–11 天</text>
+<text x="594" y="272" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="22" font-weight="900" fill="#F4F1E9" text-anchor="start">自編類題</text>
+<text x="594" y="306" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="15" font-weight="400" fill="#F4F1E9" text-anchor="start">不看解析，限時</text>
+<polygon points="743,255 757,265 743,275" fill="#102B50"/>
+<rect x="760" y="190" width="160" height="150" rx="4" fill="#D6A45B"/>
+<text x="774" y="226" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="17" font-weight="700" fill="#102B50" text-anchor="start">第 12–14 天</text>
+<text x="774" y="272" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="22" font-weight="900" fill="#102B50" text-anchor="start">模擬＋錯題</text>
+<text x="774" y="306" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="15" font-weight="400" fill="#102B50" text-anchor="start">回溯到考點</text>
+<text x="40" y="400" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="17" font-weight="700" fill="#102B50" text-anchor="start">每答錯一題：記下考點、自己的推理漏洞、正解關鍵、干擾選項</text>
+</svg>

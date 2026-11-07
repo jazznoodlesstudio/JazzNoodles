@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="520" viewBox="0 0 960 520" role="img" aria-label="依信心分流給人工複核。門檻要用標註資料校準，高信心也要持續抽樣">
+<title>依信心分流給人工複核</title>
+<rect width="960" height="520" fill="#F4F1E9"/>
+<line x1="40" y1="26" x2="920" y2="26" stroke="#102B50" stroke-width="1" opacity="0.14"/>
+<line x1="40" y1="32" x2="920" y2="32" stroke="#102B50" stroke-width="1" opacity="0.14"/>
+<line x1="40" y1="38" x2="920" y2="38" stroke="#102B50" stroke-width="1" opacity="0.14"/>
+<line x1="40" y1="44" x2="920" y2="44" stroke="#102B50" stroke-width="1" opacity="0.14"/>
+<line x1="40" y1="50" x2="920" y2="50" stroke="#102B50" stroke-width="1" opacity="0.14"/>
+<rect x="40" y="70" width="10" height="34" fill="#D6A45B"/>
+<text x="64" y="98" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="30" font-weight="900" fill="#102B50" text-anchor="start">依信心分流給人工複核</text>
+<text x="40" y="136" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="19" font-weight="400" fill="#51647D" text-anchor="start">門檻要用標註資料校準，高信心也要持續抽樣</text>
+<rect x="40" y="220" width="200" height="90" rx="4" fill="#102B50"/>
+<text x="140.0" y="261.0" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="21" font-weight="700" fill="#F4F1E9" text-anchor="middle">擷取結果</text>
+<text x="140.0" y="287.0" font-family="'JetBrains Mono','Consolas','Menlo',monospace" font-size="15" font-weight="400" fill="#F4F1E9" text-anchor="middle" opacity="0.85">含欄位信心＋驗證</text>
+<polygon points="400,195 500,265 400,335 300,265" fill="#D6A45B"/>
+<text x="400" y="273" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="19" font-weight="900" fill="#102B50" text-anchor="middle">信心與驗證</text>
+<line x1="244" y1="265" x2="286.0" y2="265.0" stroke="#102B50" stroke-width="2.5"/>
+<polygon points="298,265 286.0,258.0 286.0,272.0" fill="#102B50"/>
+<rect x="640" y="170" width="280" height="76" rx="4" fill="#3F7D5E"/>
+<text x="780.0" y="204.0" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="21" font-weight="700" fill="#F4F1E9" text-anchor="middle">自動通過</text>
+<text x="780.0" y="230.0" font-family="'JetBrains Mono','Consolas','Menlo',monospace" font-size="15" font-weight="400" fill="#F4F1E9" text-anchor="middle" opacity="0.85">高信心且驗證通過</text>
+<rect x="640" y="266" width="280" height="76" rx="4" fill="#8BAAC8"/>
+<text x="780.0" y="300.0" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="21" font-weight="700" fill="#102B50" text-anchor="middle">人工複核佇列</text>
+<text x="780.0" y="326.0" font-family="'JetBrains Mono','Consolas','Menlo',monospace" font-size="15" font-weight="400" fill="#102B50" text-anchor="middle" opacity="0.85">中信心</text>
+<rect x="640" y="362" width="280" height="76" rx="4" fill="#B5483E"/>
+<text x="780.0" y="396.0" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="21" font-weight="700" fill="#F4F1E9" text-anchor="middle">人工處理</text>
+<text x="780.0" y="422.0" font-family="'JetBrains Mono','Consolas','Menlo',monospace" font-size="15" font-weight="400" fill="#F4F1E9" text-anchor="middle" opacity="0.85">低信心／驗證失敗</text>
+<line x1="496" y1="240" x2="624.3" y2="210.7" stroke="#102B50" stroke-width="2.5"/>
+<polygon points="636,208 622.7,203.8 625.9,217.5" fill="#102B50"/>
+<line x1="502" y1="265" x2="624.5" y2="300.6" stroke="#102B50" stroke-width="2.5"/>
+<polygon points="636,304 626.4,293.9 622.5,307.4" fill="#102B50"/>
+<line x1="480" y1="308" x2="625.7" y2="393.9" stroke="#102B50" stroke-width="2.5"/>
+<polygon points="636,400 629.2,387.9 622.1,399.9" fill="#102B50"/>
+<text x="40" y="404" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="18" font-weight="700" fill="#102B50" text-anchor="start">自動通過的案件</text>
+<text x="40" y="430" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="18" font-weight="700" fill="#102B50" text-anchor="start">仍要定期抽樣、分群檢查</text>
+</svg>

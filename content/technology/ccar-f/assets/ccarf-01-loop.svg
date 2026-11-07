@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="600" viewBox="0 0 960 600" role="img" aria-label="Agentic loop：看手勢決定下一步。迴圈靠 stop_reason 推進，不是靠模型說了什麼">
+<title>Agentic loop：看手勢決定下一步</title>
+<rect width="960" height="600" fill="#F4F1E9"/>
+<line x1="40" y1="26" x2="920" y2="26" stroke="#102B50" stroke-width="1" opacity="0.14"/>
+<line x1="40" y1="32" x2="920" y2="32" stroke="#102B50" stroke-width="1" opacity="0.14"/>
+<line x1="40" y1="38" x2="920" y2="38" stroke="#102B50" stroke-width="1" opacity="0.14"/>
+<line x1="40" y1="44" x2="920" y2="44" stroke="#102B50" stroke-width="1" opacity="0.14"/>
+<line x1="40" y1="50" x2="920" y2="50" stroke="#102B50" stroke-width="1" opacity="0.14"/>
+<rect x="40" y="70" width="10" height="34" fill="#D6A45B"/>
+<text x="64" y="98" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="30" font-weight="900" fill="#102B50" text-anchor="start">Agentic loop：看手勢決定下一步</text>
+<text x="40" y="136" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="19" font-weight="400" fill="#51647D" text-anchor="start">迴圈靠 stop_reason 推進，不是靠模型說了什麼</text>
+<rect x="40" y="200" width="220" height="80" rx="4" fill="#102B50"/>
+<text x="150.0" y="236.0" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="21" font-weight="700" fill="#F4F1E9" text-anchor="middle">送出訊息</text>
+<text x="150.0" y="262.0" font-family="'JetBrains Mono','Consolas','Menlo',monospace" font-size="15" font-weight="400" fill="#F4F1E9" text-anchor="middle" opacity="0.85">messages + tools</text>
+<polygon points="450,170 560,240 450,310 340,240" fill="#D6A45B"/>
+<text x="450" y="248" font-family="'JetBrains Mono','Consolas','Menlo',monospace" font-size="19" font-weight="900" fill="#102B50" text-anchor="middle">stop_reason?</text>
+<rect x="680" y="200" width="240" height="80" rx="4" fill="#3F7D5E"/>
+<text x="800.0" y="247.0" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="21" font-weight="700" fill="#F4F1E9" text-anchor="middle">結束，回傳結果</text>
+<rect x="330" y="400" width="240" height="80" rx="4" fill="#8BAAC8"/>
+<text x="450.0" y="436.0" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="21" font-weight="700" fill="#102B50" text-anchor="middle">執行每個工具</text>
+<text x="450.0" y="462.0" font-family="'JetBrains Mono','Consolas','Menlo',monospace" font-size="15" font-weight="400" fill="#102B50" text-anchor="middle" opacity="0.85">tool_use 區塊</text>
+<rect x="40" y="400" width="220" height="80" rx="4" fill="#102B50"/>
+<text x="150.0" y="436.0" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="21" font-weight="700" fill="#F4F1E9" text-anchor="middle">回填 tool_result</text>
+<text x="150.0" y="462.0" font-family="'JetBrains Mono','Consolas','Menlo',monospace" font-size="15" font-weight="400" fill="#F4F1E9" text-anchor="middle" opacity="0.85">對應 tool_use_id</text>
+<rect x="680" y="400" width="240" height="80" rx="4" fill="#3E5C85"/>
+<text x="800.0" y="436.0" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="21" font-weight="700" fill="#F4F1E9" text-anchor="middle">依情況處理</text>
+<text x="800.0" y="462.0" font-family="'JetBrains Mono','Consolas','Menlo',monospace" font-size="15" font-weight="400" fill="#F4F1E9" text-anchor="middle" opacity="0.85">max_tokens / pause_turn</text>
+<line x1="260" y1="240" x2="326.0" y2="240.0" stroke="#102B50" stroke-width="2.5"/>
+<polygon points="338,240 326.0,233.0 326.0,247.0" fill="#102B50"/>
+<line x1="560" y1="240" x2="666.0" y2="240.0" stroke="#3F7D5E" stroke-width="2.5"/>
+<polygon points="678,240 666.0,233.0 666.0,247.0" fill="#3F7D5E"/>
+<text x="580" y="226" font-family="'JetBrains Mono','Consolas','Menlo',monospace" font-size="16" font-weight="700" fill="#3F7D5E" text-anchor="start">end_turn</text>
+<line x1="450" y1="310" x2="450.0" y2="386.0" stroke="#102B50" stroke-width="2.5"/>
+<polygon points="450,398 457.0,386.0 443.0,386.0" fill="#102B50"/>
+<text x="462" y="362" font-family="'JetBrains Mono','Consolas','Menlo',monospace" font-size="16" font-weight="700" fill="#102B50" text-anchor="start">tool_use</text>
+<line x1="328" y1="440" x2="274.0" y2="440.0" stroke="#102B50" stroke-width="2.5"/>
+<polygon points="262,440 274.0,447.0 274.0,433.0" fill="#102B50"/>
+<line x1="150" y1="398" x2="150.0" y2="294.0" stroke="#102B50" stroke-width="2.5"/>
+<polygon points="150,282 143.0,294.0 157.0,294.0" fill="#102B50"/>
+<line x1="520" y1="290" x2="668.7" y2="412.4" stroke="#102B50" stroke-width="2.5"/>
+<polygon points="678,420 673.2,407.0 664.3,417.8" fill="#102B50"/>
+<text x="600" y="340" font-family="'JetBrains Mono','Consolas','Menlo',monospace" font-size="16" font-weight="700" fill="#102B50" text-anchor="start">其他</text>
+<text x="40" y="570" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="18" font-weight="700" fill="#B5483E" text-anchor="start">迭代上限是安全網：觸發代表異常，不是完成</text>
+</svg>

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="420" viewBox="0 0 960 420" role="img" aria-label="四週備考路線。先動手、再精讀，最後用錯題回頭找考點">
+<title>四週備考路線</title>
+<rect width="960" height="420" fill="#F4F1E9"/>
+<line x1="40" y1="26" x2="920" y2="26" stroke="#102B50" stroke-width="1" opacity="0.14"/>
+<line x1="40" y1="32" x2="920" y2="32" stroke="#102B50" stroke-width="1" opacity="0.14"/>
+<line x1="40" y1="38" x2="920" y2="38" stroke="#102B50" stroke-width="1" opacity="0.14"/>
+<line x1="40" y1="44" x2="920" y2="44" stroke="#102B50" stroke-width="1" opacity="0.14"/>
+<line x1="40" y1="50" x2="920" y2="50" stroke="#102B50" stroke-width="1" opacity="0.14"/>
+<rect x="40" y="70" width="10" height="34" fill="#D6A45B"/>
+<text x="64" y="98" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="30" font-weight="900" fill="#102B50" text-anchor="start">四週備考路線</text>
+<text x="40" y="136" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="19" font-weight="400" fill="#51647D" text-anchor="start">先動手、再精讀，最後用錯題回頭找考點</text>
+<rect x="40" y="190" width="196" height="150" rx="4" fill="#102B50"/>
+<text x="58" y="228" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="20" font-weight="700" fill="#F4F1E9" text-anchor="start">第 1 週</text>
+<text x="58" y="274" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="24" font-weight="900" fill="#F4F1E9" text-anchor="start">讀官方 guide</text>
+<text x="58" y="312" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="17" font-weight="400" fill="#F4F1E9" text-anchor="start">整理考點地圖</text>
+<polygon points="243,255 261,265 243,275" fill="#102B50"/>
+<rect x="268" y="190" width="196" height="150" rx="4" fill="#D6A45B"/>
+<text x="286" y="228" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="20" font-weight="700" fill="#102B50" text-anchor="start">第 2 週</text>
+<text x="286" y="274" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="24" font-weight="900" fill="#102B50" text-anchor="start">動手做</text>
+<text x="286" y="312" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="17" font-weight="400" fill="#102B50" text-anchor="start">迴圈・MCP・設定檔</text>
+<polygon points="471,255 489,265 471,275" fill="#102B50"/>
+<rect x="496" y="190" width="196" height="150" rx="4" fill="#102B50"/>
+<text x="514" y="228" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="20" font-weight="700" fill="#F4F1E9" text-anchor="start">第 3 週</text>
+<text x="514" y="274" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="24" font-weight="900" fill="#F4F1E9" text-anchor="start">依權重精讀</text>
+<text x="514" y="312" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="17" font-weight="400" fill="#F4F1E9" text-anchor="start">每個 domain 自編 5 題</text>
+<polygon points="699,255 717,265 699,275" fill="#102B50"/>
+<rect x="724" y="190" width="196" height="150" rx="4" fill="#3E5C85"/>
+<text x="742" y="228" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="20" font-weight="700" fill="#F4F1E9" text-anchor="start">第 4 週</text>
+<text x="742" y="274" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="24" font-weight="900" fill="#F4F1E9" text-anchor="start">模擬題</text>
+<text x="742" y="312" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="17" font-weight="400" fill="#F4F1E9" text-anchor="start">錯題對回考點</text>
+<text x="40" y="390" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="17" font-weight="700" fill="#102B50" text-anchor="start">第 2 週最重要：沒做過，考場上分不出「看起來對」和「真的對」</text>
+</svg>

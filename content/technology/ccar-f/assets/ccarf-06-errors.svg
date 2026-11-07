@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="580" viewBox="0 0 960 580" role="img" aria-label="工具出錯：分類後才知道怎麼辦。每個錯誤至少帶「類型、可否重試、說明」">
+<title>工具出錯：分類後才知道怎麼辦</title>
+<rect width="960" height="580" fill="#F4F1E9"/>
+<line x1="40" y1="26" x2="920" y2="26" stroke="#102B50" stroke-width="1" opacity="0.14"/>
+<line x1="40" y1="32" x2="920" y2="32" stroke="#102B50" stroke-width="1" opacity="0.14"/>
+<line x1="40" y1="38" x2="920" y2="38" stroke="#102B50" stroke-width="1" opacity="0.14"/>
+<line x1="40" y1="44" x2="920" y2="44" stroke="#102B50" stroke-width="1" opacity="0.14"/>
+<line x1="40" y1="50" x2="920" y2="50" stroke="#102B50" stroke-width="1" opacity="0.14"/>
+<rect x="40" y="70" width="10" height="34" fill="#D6A45B"/>
+<text x="64" y="98" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="30" font-weight="900" fill="#102B50" text-anchor="start">工具出錯：分類後才知道怎麼辦</text>
+<text x="40" y="136" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="19" font-weight="400" fill="#51647D" text-anchor="start">每個錯誤至少帶「類型、可否重試、說明」</text>
+<text x="40" y="186" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="18" font-weight="700" fill="#51647D" text-anchor="start">錯誤類型</text>
+<text x="300" y="186" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="18" font-weight="700" fill="#51647D" text-anchor="start">例子</text>
+<text x="600" y="186" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="18" font-weight="700" fill="#51647D" text-anchor="start">該怎麼做</text>
+<rect x="40" y="200" width="230" height="64" rx="4" fill="#3F7D5E"/>
+<text x="155" y="240" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="22" font-weight="900" fill="#F4F1E9" text-anchor="middle">暫時性</text>
+<text x="300" y="240" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="20" font-weight="400" fill="#102B50" text-anchor="start">逾時、服務暫時不可用</text>
+<text x="600" y="240" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="20" font-weight="700" fill="#102B50" text-anchor="start">有上限地重試</text>
+<rect x="40" y="276" width="230" height="64" rx="4" fill="#8BAAC8"/>
+<text x="155" y="316" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="22" font-weight="900" fill="#102B50" text-anchor="middle">輸入不合法</text>
+<text x="300" y="316" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="20" font-weight="400" fill="#102B50" text-anchor="start">ID 格式錯、缺參數</text>
+<text x="600" y="316" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="20" font-weight="700" fill="#102B50" text-anchor="start">修正輸入再試</text>
+<rect x="40" y="352" width="230" height="64" rx="4" fill="#B5483E"/>
+<text x="155" y="392" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="22" font-weight="900" fill="#F4F1E9" text-anchor="middle">權限</text>
+<text x="300" y="392" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="20" font-weight="400" fill="#102B50" text-anchor="start">沒有存取權</text>
+<text x="600" y="392" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="20" font-weight="700" fill="#102B50" text-anchor="start">不重試，升級或請求授權</text>
+<rect x="40" y="428" width="230" height="64" rx="4" fill="#B5483E"/>
+<text x="155" y="468" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="22" font-weight="900" fill="#F4F1E9" text-anchor="middle">業務規則</text>
+<text x="300" y="468" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="20" font-weight="400" fill="#102B50" text-anchor="start">超過上限、訂單已結案</text>
+<text x="600" y="468" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="20" font-weight="700" fill="#102B50" text-anchor="start">不重試，告知或升級</text>
+<text x="40" y="556" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="18" font-weight="700" fill="#B5483E" text-anchor="start">「查無資料」不是錯誤：回明確的空結果，不要和逾時混為一談</text>
+</svg>

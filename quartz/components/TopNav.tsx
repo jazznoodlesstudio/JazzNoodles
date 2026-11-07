@@ -1,65 +1,43 @@
 import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from "./types"
-import { resolveRelative, FullSlug } from "../util/path"
+import { FullSlug, SimpleSlug, resolveRelative } from "../util/path"
+import { classNames } from "../util/lang"
 
-// Jazznoodles 主選單：順序就是畫面上的順序
-const links = [
-  { title: "Home", slug: "index" },
-  { title: "Technology", slug: "technology/index" },
-  { title: "Product & Business", slug: "product-business/index" },
-  { title: "Faith", slug: "faith/index" },
-  { title: "Creative Studio", slug: "creative-studio/index" },
-  { title: "Travel", slug: "travel/index" },
-  { title: "Lab", slug: "lab/index" },
-  { title: "Notes", slug: "notes/index" },
-  { title: "About", slug: "about" },
+// cat：對應 custom.scss 的分類色（tech 藍／know 青／create 紫／travel 橘／none 灰）
+type Item = { label: string; slug: string; match: string; cat: string }
+
+const ITEMS: Item[] = [
+  { label: "Home", slug: "", match: "", cat: "none" },
+  { label: "Technology", slug: "technology/", match: "technology", cat: "tech" },
+  { label: "Product & Business", slug: "product-business/", match: "product-business", cat: "know" },
+  { label: "Faith", slug: "faith/", match: "faith", cat: "know" },
+  { label: "Creative Studio", slug: "creative-studio/", match: "creative-studio", cat: "create" },
+  { label: "Travel", slug: "travel/", match: "travel", cat: "travel" },
+  { label: "Lab", slug: "lab/", match: "lab", cat: "create" },
+  { label: "Notes", slug: "notes/", match: "notes", cat: "none" },
+  { label: "About", slug: "about", match: "about", cat: "none" },
 ]
 
-const TopNav: QuartzComponent = ({ fileData }: QuartzComponentProps) => {
-  const current = fileData.slug! as FullSlug
+const TopNav: QuartzComponent = ({ fileData, displayClass }: QuartzComponentProps) => {
+  const current = fileData.slug as FullSlug
+  const isActive = (it: Item) =>
+    it.match === ""
+      ? current === "index"
+      : current === it.match || current.startsWith(it.match + "/")
+
   return (
-    <nav class="top-nav" aria-label="主選單">
-      {links.map((l) => {
-        const section = l.slug.split("/")[0]
-        const isHome = l.slug === "index"
-        const active = isHome ? current === "index" : current.startsWith(section)
-        return (
-          <a class={active ? "active" : ""} href={resolveRelative(current, l.slug as FullSlug)}>
-            {l.title}
-          </a>
-        )
-      })}
+    <nav class={classNames(displayClass, "jn-topnav")} aria-label="主選單">
+      {ITEMS.map((it) => (
+        <a
+          href={resolveRelative(current, it.slug as SimpleSlug)}
+          data-cat={it.cat}
+          class={isActive(it) ? "active" : ""}
+          aria-current={isActive(it) ? "page" : undefined}
+        >
+          {it.label}
+        </a>
+      ))}
     </nav>
   )
 }
-
-TopNav.css = `
-.top-nav {
-  display: flex;
-  gap: 0.4rem 1.3rem;
-  flex-wrap: wrap;
-  padding: 0.4rem 0 0.8rem;
-  border-bottom: 1px solid var(--lightgray);
-  margin-bottom: 1rem;
-}
-.top-nav a {
-  color: var(--darkgray);
-  font-weight: 500;
-  font-size: 0.95rem;
-  text-decoration: none;
-  background: none;
-  padding: 0.15rem 0;
-  border-bottom: 2px solid transparent;
-  white-space: nowrap;
-  flex-shrink: 0;
-}
-.top-nav a:hover { color: var(--secondary); }
-.top-nav a.active {
-  color: var(--secondary);
-  border-bottom-color: var(--tertiary);
-}
-@media (max-width: 800px) {
-  .top-nav { flex-wrap: nowrap; overflow-x: auto; white-space: nowrap; }
-}
-`
 
 export default (() => TopNav) satisfies QuartzComponentConstructor

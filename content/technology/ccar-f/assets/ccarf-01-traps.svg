@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="520" viewBox="0 0 960 520" role="img" aria-label="停止條件：錯的 vs 對的。三個最常見的陷阱，左邊是容易出事的寫法">
+<title>停止條件：錯的 vs 對的</title>
+<rect width="960" height="520" fill="#F4F1E9"/>
+<line x1="40" y1="26" x2="920" y2="26" stroke="#102B50" stroke-width="1" opacity="0.14"/>
+<line x1="40" y1="32" x2="920" y2="32" stroke="#102B50" stroke-width="1" opacity="0.14"/>
+<line x1="40" y1="38" x2="920" y2="38" stroke="#102B50" stroke-width="1" opacity="0.14"/>
+<line x1="40" y1="44" x2="920" y2="44" stroke="#102B50" stroke-width="1" opacity="0.14"/>
+<line x1="40" y1="50" x2="920" y2="50" stroke="#102B50" stroke-width="1" opacity="0.14"/>
+<rect x="40" y="70" width="10" height="34" fill="#D6A45B"/>
+<text x="64" y="98" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="30" font-weight="900" fill="#102B50" text-anchor="start">停止條件：錯的 vs 對的</text>
+<text x="40" y="136" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="19" font-weight="400" fill="#51647D" text-anchor="start">三個最常見的陷阱，左邊是容易出事的寫法</text>
+<text x="40" y="186" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="22" font-weight="900" fill="#B5483E" text-anchor="start">✗  翻車寫法</text>
+<text x="500" y="186" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="22" font-weight="900" fill="#3F7D5E" text-anchor="start">✓  正確寫法</text>
+<rect x="40" y="206" width="420" height="76" rx="4" fill="#F3E1DA"/>
+<rect x="40" y="206" width="6" height="76" fill="#B5483E"/>
+<text x="64" y="252" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="20" font-weight="700" fill="#102B50" text-anchor="start">看文字有沒有說「完成」</text>
+<line x1="466" y1="244" x2="482.0" y2="244.0" stroke="#102B50" stroke-width="2.5"/>
+<polygon points="494,244 482.0,237.0 482.0,251.0" fill="#102B50"/>
+<rect x="500" y="206" width="420" height="76" rx="4" fill="#DCE9E0"/>
+<rect x="500" y="206" width="6" height="76" fill="#3F7D5E"/>
+<text x="524" y="252" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="20" font-weight="700" fill="#102B50" text-anchor="start">看 stop_reason == end_turn</text>
+<rect x="40" y="302" width="420" height="76" rx="4" fill="#F3E1DA"/>
+<rect x="40" y="302" width="6" height="76" fill="#B5483E"/>
+<text x="64" y="348" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="20" font-weight="700" fill="#102B50" text-anchor="start">跑滿 N 輪就結束</text>
+<line x1="466" y1="340" x2="482.0" y2="340.0" stroke="#102B50" stroke-width="2.5"/>
+<polygon points="494,340 482.0,333.0 482.0,347.0" fill="#102B50"/>
+<rect x="500" y="302" width="420" height="76" rx="4" fill="#DCE9E0"/>
+<rect x="500" y="302" width="6" height="76" fill="#3F7D5E"/>
+<text x="524" y="348" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="20" font-weight="700" fill="#102B50" text-anchor="start">N 輪是安全網，觸發要告警</text>
+<rect x="40" y="398" width="420" height="76" rx="4" fill="#F3E1DA"/>
+<rect x="40" y="398" width="6" height="76" fill="#B5483E"/>
+<text x="64" y="444" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="20" font-weight="700" fill="#102B50" text-anchor="start">工具出錯就丟例外</text>
+<line x1="466" y1="436" x2="482.0" y2="436.0" stroke="#102B50" stroke-width="2.5"/>
+<polygon points="494,436 482.0,429.0 482.0,443.0" fill="#102B50"/>
+<rect x="500" y="398" width="420" height="76" rx="4" fill="#DCE9E0"/>
+<rect x="500" y="398" width="6" height="76" fill="#3F7D5E"/>
+<text x="524" y="444" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="20" font-weight="700" fill="#102B50" text-anchor="start">tool_result 加 is_error 交給模型</text>
+</svg>

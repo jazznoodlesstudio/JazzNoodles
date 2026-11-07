@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="CCAR-F 備考心得系列第 01 篇封面：Agentic Loop領班的手勢。看 stop_reason，不要聽模型說了什麼">
+<title>編曲者筆記 01｜Agentic Loop領班的手勢</title>
+<defs>
+  <pattern id="dots" width="14" height="14" patternUnits="userSpaceOnUse"><circle cx="3" cy="3" r="2.2" fill="#F4F1E9" opacity="0.1"/></pattern>
+  <pattern id="dotsA" width="10" height="10" patternUnits="userSpaceOnUse"><circle cx="2.5" cy="2.5" r="1.8" fill="#D6A45B" opacity="0.6"/></pattern>
+</defs>
+<rect width="1200" height="630" fill="#102B50"/>
+<rect x="700" y="-20" width="540" height="300" fill="url(#dots)"/>
+<line x1="640" y1="420" x2="1200" y2="420" stroke="#F4F1E9" stroke-width="1.4" opacity="0.18"/>
+<line x1="640" y1="440" x2="1200" y2="440" stroke="#F4F1E9" stroke-width="1.4" opacity="0.18"/>
+<line x1="640" y1="460" x2="1200" y2="460" stroke="#F4F1E9" stroke-width="1.4" opacity="0.18"/>
+<line x1="640" y1="480" x2="1200" y2="480" stroke="#F4F1E9" stroke-width="1.4" opacity="0.18"/>
+<line x1="640" y1="500" x2="1200" y2="500" stroke="#F4F1E9" stroke-width="1.4" opacity="0.18"/>
+<line x1="640" y1="404" x2="640" y2="516" stroke="#F4F1E9" stroke-width="2" opacity="0.3"/>
+<path d="M 1030 300 A 150 150 0 1 1 880 150" fill="none" stroke="#8BAAC8" stroke-width="34"/>
+<path d="M 1037 306 A 150 150 0 1 1 887 156" fill="none" stroke="#F4F1E9" stroke-width="3"/>
+<polygon points="876,110 932,150 876,190" fill="#8BAAC8"/>
+<circle cx="1030" cy="300" r="40" fill="#D6A45B"/>
+<circle cx="774" cy="406" r="18" fill="#F4F1E9"/>
+<rect x="1080" y="96" width="64" height="64" fill="#5B84B0"/>
+<rect x="1080" y="96" width="64" height="64" fill="none" stroke="#F4F1E9" stroke-width="3" transform="translate(-8,8)"/>
+<rect x="770" y="560" width="220" height="10" fill="url(#dotsA)"/>
+<text x="72" y="104" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="20" font-weight="700" fill="#D6A45B" text-anchor="start" letter-spacing="3">TECHNOLOGY · CCAR-F 備考</text>
+<text x="72" y="222" font-family="'JetBrains Mono','Consolas','Menlo',monospace" font-size="112" font-weight="700" fill="none" text-anchor="start" stroke="#F4F1E9" stroke-width="2.5">01</text>
+<text x="72" y="308" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="54" font-weight="900" fill="#F4F1E9" text-anchor="start" letter-spacing="1">Agentic Loop</text>
+<text x="72" y="376" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="54" font-weight="900" fill="#F4F1E9" text-anchor="start" letter-spacing="1">領班的手勢</text>
+<text x="72" y="420" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="24" font-weight="400" fill="#F4F1E9" text-anchor="start" opacity="0.72">看 stop_reason，不要聽模型說了什麼</text>
+<rect x="72" y="548" width="28" height="6" fill="#D6A45B"/>
+<text x="112" y="557" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="22" font-weight="700" fill="#F4F1E9" text-anchor="start" letter-spacing="1">Jazznoodles</text>
+<text x="1128" y="557" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="18" font-weight="400" fill="#F4F1E9" text-anchor="end" letter-spacing="2" opacity="0.5">編曲者筆記</text>
+</svg>

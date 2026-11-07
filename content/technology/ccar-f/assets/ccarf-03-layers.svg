@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="650" viewBox="0 0 960 650" role="img" aria-label="這條規則放哪一層？。先問：沒做到會怎樣？「不好看」放建議層，「出事」放強制層">
+<title>這條規則放哪一層？</title>
+<rect width="960" height="650" fill="#F4F1E9"/>
+<line x1="40" y1="26" x2="920" y2="26" stroke="#102B50" stroke-width="1" opacity="0.14"/>
+<line x1="40" y1="32" x2="920" y2="32" stroke="#102B50" stroke-width="1" opacity="0.14"/>
+<line x1="40" y1="38" x2="920" y2="38" stroke="#102B50" stroke-width="1" opacity="0.14"/>
+<line x1="40" y1="44" x2="920" y2="44" stroke="#102B50" stroke-width="1" opacity="0.14"/>
+<line x1="40" y1="50" x2="920" y2="50" stroke="#102B50" stroke-width="1" opacity="0.14"/>
+<rect x="40" y="70" width="10" height="34" fill="#D6A45B"/>
+<text x="64" y="98" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="30" font-weight="900" fill="#102B50" text-anchor="start">這條規則放哪一層？</text>
+<text x="40" y="136" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="19" font-weight="400" fill="#51647D" text-anchor="start">先問：沒做到會怎樣？「不好看」放建議層，「出事」放強制層</text>
+<polygon points="480,153 630,215 480,277 330,215" fill="#D6A45B"/>
+<text x="480" y="223" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="21" font-weight="900" fill="#102B50" text-anchor="middle">沒做到會怎樣？</text>
+<line x1="330" y1="215" x2="229.7" y2="288.9" stroke="#102B50" stroke-width="2.5"/>
+<polygon points="220,296 233.8,294.5 225.5,283.2" fill="#102B50"/>
+<text x="170" y="262" font-family="'JetBrains Mono','Consolas','Menlo',monospace" font-size="16" font-weight="700" fill="#102B50" text-anchor="start">不好看</text>
+<line x1="630" y1="215" x2="730.3" y2="288.9" stroke="#102B50" stroke-width="2.5"/>
+<polygon points="740,296 734.5,283.2 726.2,294.5" fill="#102B50"/>
+<text x="700" y="262" font-family="'JetBrains Mono','Consolas','Menlo',monospace" font-size="16" font-weight="700" fill="#102B50" text-anchor="start">出事</text>
+<text x="40" y="322" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="18" font-weight="700" fill="#51647D" text-anchor="start">建議層（模型會讀，但不保證遵守）</text>
+<text x="520" y="322" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="18" font-weight="700" fill="#B5483E" text-anchor="start">強制層（程式執行，與模型無關）</text>
+<rect x="40" y="340" width="400" height="68" rx="4" fill="#102B50"/>
+<text x="240.0" y="370.0" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="21" font-weight="700" fill="#F4F1E9" text-anchor="middle">CLAUDE.md</text>
+<text x="240.0" y="396.0" font-family="'JetBrains Mono','Consolas','Menlo',monospace" font-size="15" font-weight="400" fill="#F4F1E9" text-anchor="middle" opacity="0.85">全專案慣例，啟動載入</text>
+<rect x="520" y="340" width="400" height="68" rx="4" fill="#B5483E"/>
+<text x="720.0" y="370.0" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="21" font-weight="700" fill="#F4F1E9" text-anchor="middle">PreToolUse hook</text>
+<text x="720.0" y="396.0" font-family="'JetBrains Mono','Consolas','Menlo',monospace" font-size="15" font-weight="400" fill="#F4F1E9" text-anchor="middle" opacity="0.85">執行前擋下（exit 2）</text>
+<rect x="40" y="420" width="400" height="68" rx="4" fill="#3E5C85"/>
+<text x="240.0" y="450.0" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="21" font-weight="700" fill="#F4F1E9" text-anchor="middle">.claude/rules/</text>
+<text x="240.0" y="476.0" font-family="'JetBrains Mono','Consolas','Menlo',monospace" font-size="15" font-weight="400" fill="#F4F1E9" text-anchor="middle" opacity="0.85">paths: glob，用到才載入</text>
+<rect x="520" y="420" width="400" height="68" rx="4" fill="#B5483E"/>
+<text x="720.0" y="450.0" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="21" font-weight="700" fill="#F4F1E9" text-anchor="middle">permissions deny</text>
+<text x="720.0" y="476.0" font-family="'JetBrains Mono','Consolas','Menlo',monospace" font-size="15" font-weight="400" fill="#F4F1E9" text-anchor="middle" opacity="0.85">禁止的工具與檔案</text>
+<rect x="40" y="500" width="400" height="68" rx="4" fill="#8BAAC8"/>
+<text x="240.0" y="530.0" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="21" font-weight="700" fill="#102B50" text-anchor="middle">Skills</text>
+<text x="240.0" y="556.0" font-family="'JetBrains Mono','Consolas','Menlo',monospace" font-size="15" font-weight="400" fill="#102B50" text-anchor="middle" opacity="0.85">偶爾用的流程，按需載入</text>
+<rect x="520" y="500" width="400" height="68" rx="4" fill="#102B50"/>
+<text x="720.0" y="530.0" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="21" font-weight="700" fill="#F4F1E9" text-anchor="middle">PostToolUse hook</text>
+<text x="720.0" y="556.0" font-family="'JetBrains Mono','Consolas','Menlo',monospace" font-size="15" font-weight="400" fill="#F4F1E9" text-anchor="middle" opacity="0.85">執行後收尾，不能擋</text>
+<text x="40" y="632" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="17" font-weight="700" fill="#102B50" text-anchor="start">加粗、全大寫、重複三次仍是建議層；可靠度取決於誰執行，不是語氣</text>
+</svg>

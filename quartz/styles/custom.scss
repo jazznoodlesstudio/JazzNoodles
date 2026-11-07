@@ -1,200 +1,607 @@
 @use "./base.scss";
+@use "./variables.scss" as *;
 
-// ===== Jazznoodles 品牌色 =====
-// Ocean Blue #1E63D1（主色）· Sky Blue #6FB6FF（輔助）· Cloud White #F8FAFF（背景）
-// Sunshine Yellow #FFD166（強調）· Dream Lavender #C7B8FF（點綴）
+// =====================================================================
+// Jazznoodles — Playful Editorial × Modern Digital
+// 色票主體在 quartz.config.ts；這裡只放「額外 token」與版面規則
+// =====================================================================
+
+// ---------- 1. 額外 token（淺色） ----------
+:root:root {
+  // :root:root 讓字型變數的優先序高於 Quartz 自動產生的主題變數
+  --bodyFont: "Inter", "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", system-ui, sans-serif;
+  --headerFont: "Manrope", "Inter", "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+  --titleFont: var(--headerFont);
+}
 :root {
-  --jn-ocean: #1e63d1;
-  --jn-sky: #6fb6ff;
-  --jn-cloud: #f8faff;
-  --jn-sun: #ffd166;
-  --jn-lavender: #c7b8ff;
-  --jn-sky-gradient: linear-gradient(90deg, #1e63d1, #6fb6ff);
-  --jn-warm-gradient: linear-gradient(90deg, #6fb6ff, #ffd166);
+  --surface: #ffffff; // 卡片、面板
+  --surface2: #eae8e0; // 次要區塊
+  --primary: #3678f6; // 原色：只用於圖形、指示條（文字用 --secondary）
+  --psoft: #e6eefe; // 目前所在頁、標籤底
+  --c-tech: #3678f6;
+  --c-know: #159dad;
+  --c-create: #8878d9;
+  --c-travel: #f2a36b;
+  --c-none: #687386;
+  --hl: #f2a36b; // Highlight 橘：只當圖形
+  --hl-ink: #a4561a; // 橘色文字（AA 5.0:1）
+
+  --jn-header-h: 68px;
+  --jn-side-w: 264px;
+  --jn-read-w: 760px;
 }
 
-// ===== 首頁封面（整張圖）=====
-.hero-image {
-  position: relative;
-  margin: 0.5rem 0 2.5rem;
-  border-radius: 22px;
-  overflow: hidden;
-  background: var(--jn-sky-gradient);
-  box-shadow: 0 12px 32px rgba(30, 99, 209, 0.18);
+// ---------- 2. 額外 token（深色） ----------
+:root[saved-theme="dark"] {
+  --surface: #222b3b;
+  --surface2: #293448;
+  --primary: #6d9eff;
+  --psoft: #2a3a5e;
+  --c-tech: #6d9eff;
+  --c-know: #55c5ce;
+  --c-create: #b2a5ff;
+  --c-travel: #ffb27f;
+  --c-none: #a5b0c2;
+  --hl: #ffb27f;
+  --hl-ink: #ffb27f;
+}
 
-  img {
-    display: block;
-    width: 100%;
-    height: auto;
-    margin: 0;
-    border-radius: 0;
+// 依資料夾自動帶入「目前分類色」
+body {
+  --cat: var(--c-none);
+}
+body[data-slug^="technology"] {
+  --cat: var(--c-tech);
+}
+body[data-slug^="product-business"],
+body[data-slug^="faith"] {
+  --cat: var(--c-know);
+}
+body[data-slug^="creative-studio"],
+body[data-slug^="lab"] {
+  --cat: var(--c-create);
+}
+body[data-slug^="travel"] {
+  --cat: var(--c-travel);
+}
+
+// ---------- 3. 內文排版 ----------
+body {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+.page article {
+  font-size: 1.0625rem; // 17px
+  line-height: 1.85;
+
+  & > h1 {
+    font-size: 2.25rem;
+    font-weight: 800;
+    line-height: 1.3;
+    letter-spacing: -0.02em;
   }
+  h2 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-top: 2.2rem;
+  }
+  h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.5;
+  }
+  h4,
+  h5,
+  h6 {
+    font-weight: 500;
+  }
+}
+.content-meta {
+  font-size: 0.85rem;
+  color: var(--gray);
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin-right: 8px;
+    border-radius: 50%;
+    background: var(--cat);
+  }
+}
 
-  // 圖上「Personal Knowledge & Technology Brand →」按鈕的可點擊區域
-  a.hero-hotspot {
-    position: absolute;
-    left: 12.1%;
-    top: 51.7%;
-    width: 26.4%;
-    height: 5.1%;
-    border-radius: 999px;
-    background: transparent !important;
-    padding: 0 !important;
-    transition: box-shadow 0.2s, background 0.2s;
+// 標籤＝淡底膠囊
+a.internal.tag-link {
+  font-size: 0.8rem;
+  padding: 0.1rem 0.7rem;
+  border-radius: 999px;
+  background-color: var(--psoft);
+  color: var(--secondary);
+}
+
+// ==重點== 螢光筆
+.text-highlight {
+  padding: 0 0.15rem;
+  border-radius: 4px;
+}
+
+// ---------- 4. 頂部列 ----------
+.page > #quartz-body {
+  padding-top: var(--jn-header-h);
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  height: var(--jn-header-h);
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0 clamp(1rem, 3vw, 2.5rem);
+  background: color-mix(in srgb, var(--light) 90%, transparent);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--lightgray);
+
+  // 內層 Flex 撐滿，垂直置中
+  & > .flex-component {
+    width: 100%;
+    max-width: calc(var(--jn-side-w) * 2 + var(--jn-read-w) + 80px);
+    margin: 0 auto;
+    align-items: center;
+  }
+}
+.page-title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  font-family: var(--headerFont);
+  & a {
+    color: var(--dark);
     &:hover {
-      background: rgba(111, 182, 255, 0.25) !important;
-      box-shadow: 0 0 0 2px var(--jn-sky);
+      color: var(--dark);
     }
   }
 }
 
-// ===== 導覽列：白底 =====
-.top-nav {
-  background: #ffffff;
-  border: 1px solid #e3ebf8 !important;
-  border-radius: 14px;
-  padding: 0.55rem 1rem !important;
-  gap: 0.4rem 1.05rem !important;
+.jn-topnav {
+  display: flex;
+  gap: 0.2rem 1.4rem;
+  overflow-x: auto;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  & a {
+    position: relative;
+    flex: 0 0 auto;
+    padding: 0.55rem 0;
+    font-family: var(--headerFont);
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--darkgray);
+    opacity: 0.8;
+    white-space: nowrap;
+    box-shadow: inset 0 -2px 0 transparent;
+    transition:
+      color 0.2s ease,
+      opacity 0.2s ease,
+      box-shadow 0.2s ease;
+
+    &:hover {
+      color: var(--secondary);
+      opacity: 1;
+    }
+    &.active {
+      color: var(--secondary);
+      opacity: 1;
+      box-shadow: inset 0 -2px 0 var(--c-none);
+    }
+    &[data-cat="tech"].active {
+      box-shadow: inset 0 -2px 0 var(--c-tech);
+    }
+    &[data-cat="know"].active {
+      box-shadow: inset 0 -2px 0 var(--c-know);
+    }
+    &[data-cat="create"].active {
+      box-shadow: inset 0 -2px 0 var(--c-create);
+    }
+    &[data-cat="travel"].active {
+      box-shadow: inset 0 -2px 0 var(--c-travel);
+    }
+  }
 }
 
-// ===== 首頁目錄卡片 =====
-.cat-grid {
+// 搜尋鈕：淺底圓角
+.search > .search-button {
+  height: 2.5rem;
+  border-radius: 10px;
+  background: var(--surface);
+  min-width: 11rem;
+}
+.darkmode,
+.readermode {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  &:hover {
+    background: var(--surface2);
+  }
+}
+
+// ---------- 5. 三欄版面：264 ｜ 760 ｜ 264，同一條起始線 ----------
+.page > #quartz-body {
+  .sidebar {
+    top: var(--jn-header-h);
+    height: calc(100vh - var(--jn-header-h));
+    padding: 2rem 0 2rem 0;
+    gap: 1.6rem;
+  }
+  .page-header {
+    margin-top: 2rem;
+  }
+
+  @media all and ($desktop) {
+    grid-template-columns: var(--jn-side-w) minmax(0, var(--jn-read-w)) var(--jn-side-w);
+    column-gap: 40px;
+    justify-content: center;
+  }
+  @media all and ($tablet) {
+    grid-template-columns: 240px minmax(0, 1fr);
+    column-gap: 32px;
+  }
+  @media all and ($mobile) {
+    .sidebar.left,
+    .sidebar.right {
+      padding: 0;
+    }
+    .page-header {
+      margin-top: 1rem;
+    }
+  }
+}
+@media all and ($mobile) {
+  :root {
+    --jn-header-h: 60px;
+  }
+  .search > .search-button {
+    min-width: 0;
+  }
+  .search > .search-button > p {
+    display: none;
+  }
+}
+
+// ---------- 6. 側欄區塊標題：全部同一種 ----------
+button.desktop-explorer h2,
+button.mobile-explorer h2,
+.graph > h3,
+button.toc-header h3,
+.backlinks > h3 {
+  font-family: var(--bodyFont);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gray);
+}
+.explorer > button.desktop-explorer,
+button.toc-header,
+.graph > h3,
+.backlinks > h3 {
+  width: 100%;
+  box-sizing: border-box;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--lightgray);
+}
+
+// ---------- 7. Explorer：編號＋短標題，最多兩行 ----------
+.explorer-content {
+  & ul li > a {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    padding: 0.2rem 0.5rem;
+    margin: 1px 0;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.5;
+    color: var(--darkgray);
+
+    &:hover {
+      background: var(--surface2);
+      color: var(--secondary);
+    }
+    &.active {
+      background: var(--psoft);
+      color: var(--secondary);
+      font-weight: 600;
+      box-shadow: inset 2px 0 0 var(--cat);
+    }
+  }
+  .folder-container div > a,
+  .folder-container div > button span {
+    color: var(--dark);
+    font-size: 0.95rem;
+    font-weight: 700;
+  }
+  .folder-icon {
+    color: var(--gray);
+  }
+  .folder-outer > ul {
+    margin-left: 7px;
+    padding-left: 0.6rem;
+  }
+}
+
+// ---------- 8. 右欄 ----------
+.graph > .graph-outer {
+  border-radius: 14px;
+  background: var(--surface);
+}
+ul.toc-content.overflow > li > a {
+  color: var(--darkgray);
+  font-size: 0.875rem;
+  font-weight: 500;
+  &.in-view {
+    color: var(--secondary);
+    opacity: 1;
+  }
+}
+.backlinks > ul.overflow > li > a {
+  display: block;
+  padding: 0.2rem 0.5rem;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.5;
+  &:hover {
+    background: var(--surface2);
+  }
+}
+
+// ---------- 9. 首頁：主視覺（原圖）＋分類卡片 ----------
+// 主視覺：維持原圖，只加圓角與外框
+.jn-hero {
+  position: relative;
+}
+// 主視覺上「Personal Knowledge & Technology Brand →」按鈕的透明連結
+a.jn-hero-link.internal {
+  position: absolute;
+  left: 12%;
+  top: 51.5%;
+  width: 26.5%;
+  height: 5.5%;
+  padding: 0;
+  border-radius: 999px;
+  background: transparent;
+  &:hover {
+    background: rgba(255, 255, 255, 0.12);
+  }
+}
+// 任何首頁主視覺圖：維持原比例，不被舊的固定高度拉伸
+.jn-hero img,
+body[data-slug="index"] article img[src*="hero"] {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto !important;
+  aspect-ratio: auto !important;
+  object-fit: contain;
+  border-radius: 28px;
+  border: 1px solid var(--lightgray);
+}
+
+// 分類卡片：文字卡＋頂部分類色條（不放封面圖，不用漸層）
+.jn-cards {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 1rem;
-  margin: 1rem 0 2rem;
+  gap: 16px;
+  margin: 1.5rem 0;
 }
-.cat-grid a.cat-card {
+a.jn-card.internal {
   position: relative;
-  display: block;
-  padding: 1.25rem 1.2rem 1.2rem !important;
-  border-radius: 16px;
-  border: 1px solid #e3ebf8;
-  background: #ffffff !important;
-  color: var(--dark) !important;
-  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
   overflow: hidden;
-  transition: transform 0.15s, box-shadow 0.15s;
-  // 上緣色條：Sky Gradient
+  padding: 1.4rem 1.2rem 1.1rem;
+  border: 1px solid var(--lightgray);
+  border-radius: 16px;
+  background: var(--surface);
+  color: var(--dark);
+  line-height: 1.5;
+  transition:
+    transform 0.18s ease,
+    border-color 0.18s ease;
+
   &::before {
     content: "";
     position: absolute;
     left: 0;
     right: 0;
     top: 0;
-    height: 5px;
-    background: var(--jn-sky-gradient);
+    height: 4px;
+    background: var(--c-none);
+  }
+  &[data-cat="tech"]::before {
+    background: var(--c-tech);
+  }
+  &[data-cat="know"]::before {
+    background: var(--c-know);
+  }
+  &[data-cat="create"]::before {
+    background: var(--c-create);
+  }
+  &[data-cat="travel"]::before {
+    background: var(--c-travel);
+  }
+
+  --card-c: var(--c-none);
+  &[data-cat="tech"] {
+    --card-c: var(--c-tech);
+  }
+  &[data-cat="know"] {
+    --card-c: var(--c-know);
+  }
+  &[data-cat="create"] {
+    --card-c: var(--c-create);
+  }
+  &[data-cat="travel"] {
+    --card-c: var(--c-travel);
+  }
+
+  & .jn-ico {
+    width: 44px;
+    height: 44px;
+    padding: 11px;
+    margin-bottom: 0.9rem;
+    box-sizing: border-box;
+    border-radius: 12px;
+    background: var(--surface2);
+    fill: none;
+    stroke: var(--card-c);
+    stroke-width: 1.9;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+  & strong {
+    font-family: var(--headerFont);
+    font-size: 1.1rem;
+    font-weight: 700;
+  }
+  & span {
+    font-size: 0.9rem;
+    color: var(--gray);
   }
   &:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 22px rgba(30, 99, 209, 0.16);
-    &::before { background: var(--jn-warm-gradient); }
+    border-color: var(--secondary);
+    background: var(--surface);
   }
-  .cat-name { display: block; font-weight: 700; font-size: 1.05rem; color: var(--jn-ocean); }
-  .cat-desc { display: block; margin-top: 0.3rem; font-size: 0.88rem; color: var(--darkgray); }
 }
 
-// ===== 主要按鈕：Ocean Blue，Hover：Sky Blue =====
-.jn-button,
-a.jn-button {
-  display: inline-block;
-  padding: 0.55rem 1.4rem !important;
-  border-radius: 999px;
-  background: var(--jn-ocean) !important;
-  color: #fff !important;
-  font-weight: 500;
-  transition: background 0.2s;
-  &:hover { background: var(--jn-sky) !important; }
+// 首頁各區塊標題（目錄／最新文章／系列）統一
+.jn-h2,
+.recent-notes > h3 {
+  margin: 2.5rem 0 1rem;
+  font-family: var(--headerFont);
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--dark);
 }
 
-// ===== 分類標籤：Lavender =====
-.tags a.tag-link,
-a.tag-link {
-  background-color: rgba(199, 184, 255, 0.35) !important;
-  color: #4b3a9a !important;
-  border-radius: 999px;
-  &:hover { background-color: var(--jn-lavender) !important; }
+// 系列卡片
+.jn-series {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
 }
-
-// ===== 重點文字：Sunshine Yellow =====
-// 黃色字放在白底上看不清楚，所以用「黃色螢光筆」的方式呈現：==重點== 或 <mark>
-mark,
-.text-highlight {
-  background: linear-gradient(transparent 55%, rgba(255, 209, 102, 0.75) 55%) !important;
-  color: inherit !important;
-  padding: 0 0.1em;
-}
-
-// 深色模式：白底元件改成深藍
-:root[saved-theme="dark"] {
-  .top-nav { background: var(--lightgray); border-color: var(--lightgray) !important; }
-  .cat-grid a.cat-card { background: var(--lightgray) !important; border-color: var(--lightgray); }
-  .cat-grid a.cat-card .cat-name { color: var(--jn-sky); }
-  a.tag-link { color: #e4ddff !important; }
-}
-
-// ===== 字體：英文用圓潤的 Nunito，中文用 Noto Sans TC =====
-:root:root {
-  --headerFont: "Nunito", "Noto Sans TC", sans-serif;
-  --bodyFont: "Noto Sans TC", sans-serif;
-}
-
-// ===== 左側選單：細字、柔和配色 =====
-.explorer {
-  font-family: "Nunito", "Noto Sans TC", sans-serif;
-
-  .explorer-content ul li {
-    margin: 0.1rem 0;
+a.jn-serie.internal {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 1.2rem 1.3rem;
+  border: 1px solid var(--lightgray);
+  border-radius: 16px;
+  background: var(--surface);
+  color: var(--dark);
+  line-height: 1.5;
+  transition:
+    transform 0.18s ease,
+    border-color 0.18s ease;
+  & small {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: var(--hl-ink);
   }
-  // 分類（資料夾）名稱
-  .folder-container div > a,
-  .folder-container div > button span {
-    font-family: "Nunito", "Noto Sans TC", sans-serif;
-    font-weight: 500 !important;
-    font-size: 0.95rem;
-    color: var(--dark) !important;
-    letter-spacing: 0.01em;
+  & strong {
+    font-family: var(--headerFont);
+    font-size: 1.2rem;
+    font-weight: 700;
   }
-  .folder-container div > a:hover,
-  .folder-container div > button:hover span {
-    color: var(--secondary) !important;
-  }
-  .folder-icon {
-    color: var(--gray) !important;
-    width: 14px;
-    height: 14px;
-  }
-  // 文章名稱
-  .explorer-content ul li > a {
-    font-weight: 400;
-    font-size: 0.88rem;
-    line-height: 1.55;
-    color: var(--darkgray) !important;
-    opacity: 1 !important;
-    background: none !important;
-    padding: 0.15rem 0 !important;
-    display: block;
-    &:hover { color: var(--secondary) !important; }
-    &.active {
-      color: var(--secondary) !important;
-      font-weight: 500;
-    }
-  }
-  .folder-outer > ul {
-    border-left: 1px solid #dfe8f7 !important;
-  }
-  // 「探索」標題
-  button.desktop-explorer h2,
-  button.mobile-explorer h2 {
-    font-weight: 600;
-    font-size: 0.8rem;
-    letter-spacing: 0.12em;
+  & span {
+    font-size: 0.9rem;
     color: var(--gray);
   }
+  &:hover {
+    transform: translateY(-3px);
+    border-color: var(--secondary);
+    background: var(--surface);
+  }
 }
 
-// 首頁不顯示預設的文章標題與日期（封面圖已經有標題）
-body[data-slug="index"] .article-title,
-body[data-slug="index"] .content-meta {
-  display: none;
+// 最新文章：日期｜標題｜標籤（單行列表）
+.recent-notes > ul.recent-ul {
+  margin: 0;
+  border-top: 1px solid var(--lightgray);
+  & > li {
+    margin: 0;
+    border-bottom: 1px solid var(--lightgray);
+    & > .section {
+      display: grid;
+      grid-template-columns: 7rem minmax(0, 1fr) auto;
+      grid-template-areas: "meta desc tags";
+      align-items: center;
+      gap: 0.25rem 1rem;
+      padding: 0.9rem 0.25rem;
+      @media all and ($mobile) {
+        grid-template-columns: 1fr;
+        grid-template-areas: "meta" "desc" "tags";
+      }
+    }
+    & .meta {
+      grid-area: meta;
+      margin: 0;
+      font-size: 0.85rem;
+      opacity: 1;
+      color: var(--gray);
+      font-variant-numeric: tabular-nums;
+    }
+    & .desc {
+      grid-area: desc;
+      & > h3 {
+        margin: 0;
+        font-size: 1rem;
+        font-weight: 600;
+        line-height: 1.6;
+      }
+    }
+    & .tags {
+      grid-area: tags;
+      margin: 0;
+    }
+  }
+}
+
+// ---------- 10. 資料夾列表頁（系列卡片） ----------
+li.section-li > .section .meta {
+  font-variant-numeric: tabular-nums;
+}
+
+// 首頁：不顯示文章標題、日期與標籤（版面由主視覺開場）
+body[data-slug="index"] {
+  .article-title,
+  .content-meta,
+  .tags {
+    display: none;
+  }
+}
+
+// ---------- 11. 動態偏好 ----------
+@media (prefers-reduced-motion: reduce) {
+  * {
+    scroll-behavior: auto !important;
+    transition: none !important;
+  }
 }
