@@ -37,11 +37,8 @@ export const sharedPageComponents: SharedLayout = {
     }),
   ],
   afterBody: [],
-  footer: Component.Footer({
-    links: {
-      GitHub: "https://github.com/jazznoodlesstudio",
-    },
-  }),
+  footer: Component.Footer(),
+
 }
 
 // components for pages that display a single page (e.g. a single note)
@@ -55,15 +52,26 @@ export const defaultContentPageLayout: PageLayout = {
     Component.ContentMeta(),
     Component.TagList(),
   ],
-  // 首頁底部：最新文章（只在首頁顯示）
+  // 首頁底部：左「最新文章」＋ 右「系列」（只在首頁顯示）
   afterBody: [
     Component.ConditionalRender({
-      component: Component.RecentNotes({
-        title: "最新文章",
-        limit: 6,
-        showTags: true,
-        filter: (f) =>
-          !!f.slug && !f.slug.endsWith("index") && !f.slug.startsWith("tags/"),
+      component: Component.HomeSections({
+        limit: 5,
+        series: [
+          {
+            folder: "technology/ccar-f",
+            label: "TECHNOLOGY · CCAR-F",
+            title: "編曲者筆記",
+            desc: "CCAR-F 備考系列",
+            showRange: true,
+          },
+          {
+            folder: "technology/claude-tips",
+            label: "TECHNOLOGY · CLAUDE-TIPS",
+            title: "Token 經濟學",
+            desc: "Claude 額度與省 token 工作法",
+          },
+        ],
       }),
       condition: (page) => page.fileData.slug === "index",
     }),

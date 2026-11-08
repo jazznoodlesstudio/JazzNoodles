@@ -1,15 +1,58 @@
 footer {
+  position: relative;
+  margin-top: 3rem;
   text-align: left;
-  margin-bottom: 4rem;
-  opacity: 0.7;
+  background: var(--surface);
+  // 背景與上框線延伸到整個視窗寬
+  box-shadow: 0 0 0 100vmax var(--surface);
+  clip-path: inset(0 -100vmax);
 
-  & ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100vmax;
+    right: -100vmax;
+    border-top: 1px solid var(--lightgray);
+  }
+
+  & .jn-footer {
     display: flex;
-    flex-direction: row;
-    gap: 1rem;
-    margin-top: -1rem;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 32px 0;
+  }
+  & .jn-footer-brand {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  & .jn-footer-name {
+    font-family: var(--headerFont);
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--dark);
+    & .dot {
+      color: var(--hl);
+    }
+  }
+  & .jn-footer-tag {
+    font-size: 14px;
+    color: var(--gray);
+  }
+  & nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    font-size: 14px;
+    color: var(--gray);
+    & a {
+      color: var(--gray);
+      &:hover {
+        color: var(--secondary);
+      }
+    }
   }
 }

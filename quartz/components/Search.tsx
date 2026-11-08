@@ -27,7 +27,8 @@ export default ((userOpts?: Partial<SearchOptions>) => {
               <circle cx="8" cy="8" r="7" />
             </g>
           </svg>
-          <p>{i18n(cfg.locale).components.search.title}</p>
+          <p>搜尋文章</p>
+          <kbd>Ctrl K</kbd>
         </button>
         <div class="search-container">
           <div class="search-space">
