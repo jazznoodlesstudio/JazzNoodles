@@ -190,30 +190,33 @@ exit 0
 
 > [!question] 類題 03-1
 > 某客服 agent 透過 MCP 工具 `process_refund` 處理退款。公司規定超過 500 元必須主管核准，但稽核發現有 3 筆超額退款沒有核准記錄。團隊的 CLAUDE.md 已經寫了這條規定。最有效的修正是？
-> A. 把規定改成大寫並放在 CLAUDE.md 最上面
-> B. 在 system prompt 加入三個違規範例
-> C. 設定 PreToolUse hook，金額超過 500 時 exit 2 並回報原因
-> D. 增加 `.claude/rules/refund.md`，寫明門檻
+>
+> - A. 把規定改成大寫並放在 CLAUDE.md 最上面
+> - B. 在 system prompt 加入三個違規範例
+> - C. 設定 PreToolUse hook，金額超過 500 時 exit 2 並回報原因
+> - D. 增加 `.claude/rules/refund.md`，寫明門檻
 >
 > > [!tip]- 解析
 > > 答案 **C**。A、B、D 都只是把建議講得更清楚，仍由模型決定要不要遵守。C 由 Claude Code 在工具執行前檢查，違規呼叫根本不會送出。
 
 > [!question] 類題 03-2
 > 團隊希望每次 Claude 修改檔案後都自動跑 `eslint --fix`，之前寫在 CLAUDE.md 裡，但有些 session 會漏掉。應該怎麼做？
-> A. 把指令寫成 PreToolUse hook
-> B. 設定匹配 `Edit|Write` 的 PostToolUse hook 執行 eslint
-> C. 在每次提示結尾提醒「記得跑 eslint」
-> D. 把 eslint 設定檔用 `@` 引用進 CLAUDE.md
+>
+> - A. 把指令寫成 PreToolUse hook
+> - B. 設定匹配 `Edit|Write` 的 PostToolUse hook 執行 eslint
+> - C. 在每次提示結尾提醒「記得跑 eslint」
+> - D. 把 eslint 設定檔用 `@` 引用進 CLAUDE.md
 >
 > > [!tip]- 解析
 > > 答案 **B**。「改完之後一定做」是 PostToolUse 的用途。A 的時機錯了：檔案還沒改，修不到。C 和 D 仍是建議層。
 
 > [!question] 類題 03-3
 > 一個 monorepo 的 `src/api/` 底下有一套專用的錯誤處理慣例，只在改 API 檔案時才相關，但 CLAUDE.md 因為塞了這些慣例而超過 400 行，其他工作也被拖累。最合適的整理方式是？
-> A. 刪掉這些慣例，靠模型自己看程式碼推斷
-> B. 把慣例移到 `.claude/rules/api-errors.md`，frontmatter 設 `paths: ["src/api/**/*.ts"]`
-> C. 用 `@docs/api-errors.md` 引用，內容維持在 CLAUDE.md 裡
-> D. 改成 PostToolUse hook 檢查所有檔案
+>
+> - A. 刪掉這些慣例，靠模型自己看程式碼推斷
+> - B. 把慣例移到 `.claude/rules/api-errors.md`，frontmatter 設 `paths: ["src/api/**/*.ts"]`
+> - C. 用 `@docs/api-errors.md` 引用，內容維持在 CLAUDE.md 裡
+> - D. 改成 PostToolUse hook 檢查所有檔案
 >
 > > [!tip]- 解析
 > > 答案 **B**。帶 `paths:` 的 rules 只在處理符合路徑的檔案時才載入，剛好符合「只在某類檔案才相關」。C 的 `@` 引用還是會把內容載進來，沒有省空間。D 是用強制層處理風格問題，用錯工具。

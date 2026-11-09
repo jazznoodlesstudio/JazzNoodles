@@ -154,10 +154,10 @@ Agent 系統也是這樣：
 > [!example] 自編類題 00-1
 > **情境**：一家電商要做客服 agent，可以查訂單、處理退款。團隊有三個方案：
 >
-> A. 在 system prompt 寫「退款超過 NT$5,000 請先詢問主管」
-> B. 在 `process_refund` 工具裡檢查金額，超過門檻就回傳錯誤並要求呼叫 `escalate_to_human`
-> C. 把退款上限寫進 few-shot 範例，讓模型學會
-> D. 每次退款後再請另一個 agent 審查
+> - A. 在 system prompt 寫「退款超過 NT$5,000 請先詢問主管」
+> - B. 在 `process_refund` 工具裡檢查金額，超過門檻就回傳錯誤並要求呼叫 `escalate_to_human`
+> - C. 把退款上限寫進 few-shot 範例，讓模型學會
+> - D. 每次退款後再請另一個 agent 審查
 >
 > **哪個設計最能確保高額退款一定會經過真人？**
 >

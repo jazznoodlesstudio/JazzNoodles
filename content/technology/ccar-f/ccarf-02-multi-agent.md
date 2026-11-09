@@ -1,16 +1,11 @@
 ---
-title: 編曲者筆記 02｜多 agent：拆解、交接與續接
-description: 多 agent 系統的四個考點：子任務由 orchestrator 動態拆解、交接包要帶哪些資訊、session 中斷後如何續接，以及用 subagent 隔離 context。每個考點附自編類題。
+title: "編曲者筆記 02｜多 agent：拆解、交接與續接"
+description: "多 agent 系統的四個考點：子任務由 orchestrator 動態拆解、交接包要帶哪些資訊、session 中斷後如何續接，以及用 subagent 隔離 context。每個考點附自編類題。"
 date: 2026-11-07
-tags:
-  - ccar-f
-  - claude
-  - 系列/ccar-f備考
-  - multi-agent
-  - subagent
-series: 編曲者筆記：CCAR-F 備考心得
+tags: [ccar-f, claude, 系列/ccar-f備考, multi-agent, subagent]
+series: "編曲者筆記：CCAR-F 備考心得"
 order: 2
-draft: false
+draft: true
 ---
 
 ![[ccarf-cover.jpg]]
@@ -144,30 +139,33 @@ Anthropic 的研究系統提到，每個 subagent 至少需要：
 
 > [!question] 類題 02-1
 > 一個程式碼修改 agent 要處理「把 logging 套件從 A 換成 B」，但事先不知道有哪些檔案用到。哪種設計最合適？
-> A. 固定三步驟流程：改 import、改呼叫、跑測試，每步一個 agent
-> B. orchestrator 先搜尋用到 A 的檔案，再為每個檔案或模組動態建立 worker，最後彙整
-> C. 單一 agent 一次讀完整個專案再逐一修改
-> D. 預先為每個資料夾建立一個固定 subagent
+>
+> - A. 固定三步驟流程：改 import、改呼叫、跑測試，每步一個 agent
+> - B. orchestrator 先搜尋用到 A 的檔案，再為每個檔案或模組動態建立 worker，最後彙整
+> - C. 單一 agent 一次讀完整個專案再逐一修改
+> - D. 預先為每個資料夾建立一個固定 subagent
 >
 > > [!tip]- 解析
 > > 答案 **B**。要改多少檔案取決於搜尋結果，無法預先寫死，這正是動態拆解的適用情境。A、D 的子任務是事先固定的；C 會把整個專案灌進單一 context。
 
 > [!question] 類題 02-2
 > 客服 agent 在自動退款 600 元後，因客戶要求投訴而升級給人工。人工座席接手後又重新處理了一次退款。交接包最應該補上哪一項？
-> A. 完整的對話原文
-> B. 結構化欄位，包含「已退款 600 元」這類已執行的動作與授權狀態
-> C. 客戶情緒的描述
-> D. 更長的 system prompt
+>
+> - A. 完整的對話原文
+> - B. 結構化欄位，包含「已退款 600 元」這類已執行的動作與授權狀態
+> - C. 客戶情緒的描述
+> - D. 更長的 system prompt
 >
 > > [!tip]- 解析
 > > 答案 **B**。接手方看不到先前的對話，也不知道已經退過款。結構化交接包要把已執行的動作與授權狀態明確寫出，避免重複操作。A 冗長且重點被埋；C、D 與重複退款無關。
 
 > [!question] 類題 02-3
 > 開發者昨天用 Claude Code 分析某模組到一半被中斷，今天要接著做。這段時間同事修改了其中兩個檔案。最合適的做法是？
-> A. 續接 session，並直接要求繼續
-> B. 續接 session，告知哪兩個檔案已變更，請針對這兩個檔案重新分析
-> C. 刪掉 session，從零開始
-> D. 續接 session 後，把昨天的所有結果都視為有效
+>
+> - A. 續接 session，並直接要求繼續
+> - B. 續接 session，告知哪兩個檔案已變更，請針對這兩個檔案重新分析
+> - C. 刪掉 session，從零開始
+> - D. 續接 session 後，把昨天的所有結果都視為有效
 >
 > > [!tip]- 解析
 > > 答案 **B**。既保留了未變動部分的分析成果，又處理了過期的部分。A、D 假設舊結果仍然正確；C 浪費已完成的工作。

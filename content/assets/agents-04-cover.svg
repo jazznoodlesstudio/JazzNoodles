@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="第 04 篇封面：Bug 往上傳根因先分級">
+  <title>第 04 篇封面：Bug 往上傳根因先分級</title>
+
+  <defs>
+    <linearGradient id="sky-agents-04-cover" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1E63D1"/><stop offset="1" stop-color="#6FB6FF"/>
+    </linearGradient>
+    <filter id="glow-agents-04-cover" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="9"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#sky-agents-04-cover)"/>
+  <!-- 光帶：粗細不一、彼此穿梭，只放在右側與下緣，不壓到文字 -->
+  <path d="M560 700 C 700 420, 860 640, 1000 360 S 1160 120, 1260 60" fill="none"
+        stroke="#FFD166" stroke-width="14" stroke-linecap="round" opacity=".95"/>
+  <path d="M520 -40 C 700 160, 760 60, 900 250 S 1100 420, 1260 330" fill="none"
+        stroke="#F8FAFF" stroke-width="5" stroke-linecap="round" opacity=".55"/>
+  <path d="M640 720 C 760 560, 920 700, 1040 520 S 1180 300, 1260 330" fill="none"
+        stroke="#F8FAFF" stroke-width="2.5" stroke-linecap="round" opacity=".5"/>
+  <!-- 交會處發光 -->
+  <circle cx="905" cy="258" r="26" fill="#FFD166" opacity=".55" filter="url(#glow-agents-04-cover)"/>
+  <circle cx="1002" cy="372" r="20" fill="#F8FAFF" opacity=".5" filter="url(#glow-agents-04-cover)"/>
+  <!-- 切分音：間距不規則的光點 -->
+  <g fill="#F8FAFF" opacity=".7">
+    <circle cx="610" cy="70" r="3"/><circle cx="668" cy="46" r="2"/><circle cx="781" cy="84" r="4"/>
+    <circle cx="830" cy="560" r="3"/><circle cx="1096" cy="590" r="2.5"/><circle cx="1150" cy="480" r="3.5"/>
+  </g>
+  <!-- 刻意偏離網格的重點色 -->
+  <circle cx="1118" cy="148" r="11" fill="#C7B8FF"/>
+
+
+  <g font-family="'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif" fill="#F8FAFF">
+    <text x="72" y="96" font-size="22" font-weight="600" letter-spacing="3">TECHNOLOGY · AI AGENTS</text>
+    <rect x="72" y="116" width="64" height="6" rx="3" fill="#FFD166"/>
+    <text x="72" y="238" font-size="88" font-weight="800" opacity=".35">04</text>
+    <text x="72" y="340" font-size="64" font-weight="800">Bug 往上傳</text>
+    <text x="72" y="418" font-size="64" font-weight="800">根因先分級</text>
+    <text x="72" y="486" font-size="26" opacity=".92">避免文件變成謊言</text>
+    <text x="72" y="570" font-size="24" font-weight="700" letter-spacing="1">Jazznoodles</text>
+  </g>
+
+<g><rect x="740" y="220" width="320" height="76" rx="16" fill="#F8FAFF" opacity="0.95"/><text x="770" y="267" font-family="'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="26" font-weight="800" fill="#1E63D1">PRD / SA</text><rect x="740" y="330" width="320" height="76" rx="16" fill="#F8FAFF" opacity="0.85"/><text x="770" y="377" font-family="'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="26" font-weight="800" fill="#1E63D1">SD</text><rect x="740" y="440" width="320" height="76" rx="16" fill="#F8FAFF" opacity="0.75"/><text x="770" y="487" font-family="'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="26" font-weight="800" fill="#1E63D1">Code</text><path d="M1100 520 L1100 250" stroke="#F8FAFF" stroke-width="12" stroke-linecap="round" fill="none"/><path d="M1074 282 L1100 244 L1126 282" stroke="#F8FAFF" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" fill="none"/><circle cx="1100" cy="548" r="14" fill="#C7B8FF"/></g>
+</svg>

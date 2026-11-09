@@ -128,30 +128,33 @@ MCP（Model Context Protocol）是讓 Claude 連接外部工具與資料來源�
 
 > [!question] 類題 06-1
 > 工具 `search_docs`（搜尋文件內容）和 `find_files`（依檔名找檔案）的描述都是「搜尋檔案」，agent 經常選錯。最有效的修正是？
-> A. 在 system prompt 加「找內容用 search_docs」
-> B. 把兩個工具的描述改為各自說明輸入、用途，並明寫「不適用於…請改用…」
-> C. 增加第三個工具協助判斷
-> D. 降低 temperature
+>
+> - A. 在 system prompt 加「找內容用 search_docs」
+> - B. 把兩個工具的描述改為各自說明輸入、用途，並明寫「不適用於…請改用…」
+> - C. 增加第三個工具協助判斷
+> - D. 降低 temperature
 >
 > > [!tip]- 解析
 > > 答案 **B**。工具描述是模型選工具的主要依據，問題出在描述重疊。A 容易與描述矛盾，C 增加複雜度，D 不處理根因。
 
 > [!question] 類題 06-2
 > 付款 MCP 工具在連線逾時時回傳 `{"error": "failed"}`，agent 因此告訴使用者「付款失敗，請重新操作」，結果使用者重複付款。最合適的改進是？
-> A. 讓工具逾時時直接丟例外
-> B. 回傳含錯誤類型（transient）、是否可重試、說明的結構化錯誤，並標示為錯誤結果
-> C. 在 system prompt 加「遇到錯誤不要重試」
-> D. 逾時時回傳空結果
+>
+> - A. 讓工具逾時時直接丟例外
+> - B. 回傳含錯誤類型（transient）、是否可重試、說明的結構化錯誤，並標示為錯誤結果
+> - C. 在 system prompt 加「遇到錯誤不要重試」
+> - D. 逾時時回傳空結果
 >
 > > [!tip]- 解析
 > > 答案 **B**。agent 需要資訊來分辨「該重試、該確認、還是該升級」。對付款這類有副作用的操作，還應提供確認狀態的方法，避免重複扣款。D 把錯誤偽裝成空結果，最糟。
 
 > [!question] 類題 06-3
 > 流程規定「必須先 `verify_identity`，才能呼叫 `get_account`」，違反會有合規問題。最可靠的做法是？
-> A. 在 `get_account` 的描述寫「請先驗證身分」
-> B. 在 system prompt 寫三次這個順序
-> C. 用程式（hook 或 orchestration 層）在驗證通過前擋下 `get_account`，並以 `tool_choice` 強制第一步
-> D. 增加 few-shot 範例
+>
+> - A. 在 `get_account` 的描述寫「請先驗證身分」
+> - B. 在 system prompt 寫三次這個順序
+> - C. 用程式（hook 或 orchestration 層）在驗證通過前擋下 `get_account`，並以 `tool_choice` 強制第一步
+> - D. 增加 few-shot 範例
 >
 > > [!tip]- 解析
 > > 答案 **C**。有合規後果的順序要由程式強制，A、B、D 都屬於建議層。

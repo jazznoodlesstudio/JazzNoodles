@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="620" viewBox="0 0 960 620" role="img" aria-label="Bug 先問：錯在哪一層。根因決定誰來修，而不是誰最先看到">
+<title>Bug 先問：錯在哪一層</title>
+<rect width="960" height="620" rx="20" fill="#F8FAFF" stroke="#6FB6FF" stroke-width="2"/>
+<rect x="40" y="40" width="10" height="34" rx="3" fill="#FFD166"/>
+<text x="64" y="68" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="30" font-weight="800" fill="#14284B" text-anchor="start">Bug 先問：錯在哪一層</text>
+<text x="40" y="106" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="19" font-weight="400" fill="#5B6F8E" text-anchor="start">根因決定誰來修，而不是誰最先看到</text>
+<text x="40" y="590" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="18" font-weight="700" fill="#1E63D1" text-anchor="start">只修程式碼，文件就會變成謊言</text>
+<rect x="40" y="270" width="170" height="80" rx="14" fill="#FFD166"/>
+<text x="125.0" y="308.0" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="20" font-weight="700" fill="#14284B" text-anchor="middle">Bug 單</text>
+<text x="125.0" y="332.0" font-family="'JetBrains Mono','Consolas','Menlo',monospace" font-size="14" font-weight="400" fill="#14284B" text-anchor="middle" opacity="0.9">含關聯產物版本</text>
+<rect x="260" y="270" width="170" height="80" rx="14" fill="#1E63D1"/>
+<text x="345.0" y="308.0" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="20" font-weight="700" fill="#F8FAFF" text-anchor="middle">根因分級</text>
+<text x="345.0" y="332.0" font-family="'JetBrains Mono','Consolas','Menlo',monospace" font-size="14" font-weight="400" fill="#F8FAFF" text-anchor="middle" opacity="0.9">bug-fixer</text>
+<line x1="212" y1="310" x2="247.0" y2="310.0" stroke="#14284B" stroke-width="2.5"/>
+<polygon points="258,310 247.0,316.0 247.0,304.0" fill="#14284B"/>
+<rect x="490" y="150" width="280" height="80" rx="14" fill="#E3EEFF"/>
+<text x="630.0" y="188.0" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="20" font-weight="700" fill="#14284B" text-anchor="middle">實作錯誤</text>
+<text x="630.0" y="212.0" font-family="'JetBrains Mono','Consolas','Menlo',monospace" font-size="14" font-weight="400" fill="#14284B" text-anchor="middle" opacity="0.9">修 code → Code Review → 回歸</text>
+<line x1="432" y1="310" x2="483.3" y2="200.0" stroke="#14284B" stroke-width="2.5"/>
+<polygon points="488,190 488.8,202.5 477.9,197.4" fill="#14284B"/>
+<rect x="490" y="290" width="280" height="80" rx="14" fill="#E3EEFF"/>
+<text x="630.0" y="328.0" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="20" font-weight="700" fill="#14284B" text-anchor="middle">設計錯誤（SD）</text>
+<text x="630.0" y="352.0" font-family="'JetBrains Mono','Consolas','Menlo',monospace" font-size="14" font-weight="400" fill="#14284B" text-anchor="middle" opacity="0.9">sd-agent 修 SD → 人工核准</text>
+<line x1="432" y1="310" x2="477.6" y2="326.3" stroke="#14284B" stroke-width="2.5"/>
+<polygon points="488,330 475.6,332.0 479.7,320.6" fill="#14284B"/>
+<rect x="490" y="430" width="280" height="80" rx="14" fill="#E3EEFF"/>
+<text x="630.0" y="468.0" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="20" font-weight="700" fill="#14284B" text-anchor="middle">需求錯誤（PRD/SA）</text>
+<text x="630.0" y="492.0" font-family="'JetBrains Mono','Consolas','Menlo',monospace" font-size="14" font-weight="400" fill="#14284B" text-anchor="middle" opacity="0.9">使用者確認 → 從 PRD/SA 重來</text>
+<line x1="432" y1="310" x2="484.4" y2="459.6" stroke="#14284B" stroke-width="2.5"/>
+<polygon points="488,470 478.7,461.6 490.0,457.6" fill="#14284B"/>
+<rect x="800" y="150" width="130" height="80" rx="14" fill="#1E63D1"/>
+<text x="865.0" y="188.0" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="20" font-weight="700" fill="#F8FAFF" text-anchor="middle">回歸測試</text>
+<text x="865.0" y="212.0" font-family="'JetBrains Mono','Consolas','Menlo',monospace" font-size="14" font-weight="400" fill="#F8FAFF" text-anchor="middle" opacity="0.9">全綠才關單</text>
+<rect x="800" y="360" width="130" height="70" rx="14" fill="#C7B8FF"/>
+<text x="865.0" y="393.0" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="20" font-weight="700" fill="#14284B" text-anchor="middle">變更傳播</text>
+<text x="865.0" y="417.0" font-family="'JetBrains Mono','Consolas','Menlo',monospace" font-size="14" font-weight="400" fill="#14284B" text-anchor="middle" opacity="0.9">往下重跑</text>
+<line x1="772" y1="190" x2="787.0" y2="190.0" stroke="#14284B" stroke-width="2.5"/>
+<polygon points="798,190 787.0,196.0 787.0,184.0" fill="#14284B"/>
+<line x1="772" y1="330" x2="793.6" y2="379.9" stroke="#14284B" stroke-width="2.5"/>
+<polygon points="798,390 788.1,382.3 799.1,377.5" fill="#14284B"/>
+<line x1="772" y1="470" x2="793.6" y2="420.1" stroke="#14284B" stroke-width="2.5"/>
+<polygon points="798,410 799.1,422.5 788.1,417.7" fill="#14284B"/>
+<line x1="865" y1="358" x2="865.0" y2="243.0" stroke="#14284B" stroke-width="2.5"/>
+<polygon points="865,232 871.0,243.0 859.0,243.0" fill="#14284B"/>
+<text x="480" y="548" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="15" font-weight="400" fill="#5B6F8E" text-anchor="middle">修完的單不由 fixer 自己關，由 Orchestrator 在回歸全綠後關單</text>
+</svg>

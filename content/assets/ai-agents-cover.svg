@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="AI Agents 系列封面：AI Agents一支接力隊">
+  <title>AI Agents 系列封面：AI Agents一支接力隊</title>
+
+  <defs>
+    <linearGradient id="sky-ai-agents-cover" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1E63D1"/><stop offset="1" stop-color="#6FB6FF"/>
+    </linearGradient>
+    <filter id="glow-ai-agents-cover" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="9"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#sky-ai-agents-cover)"/>
+  <!-- 光帶：粗細不一、彼此穿梭，只放在右側與下緣，不壓到文字 -->
+  <path d="M560 700 C 700 420, 860 640, 1000 360 S 1160 120, 1260 60" fill="none"
+        stroke="#FFD166" stroke-width="14" stroke-linecap="round" opacity=".95"/>
+  <path d="M520 -40 C 700 160, 760 60, 900 250 S 1100 420, 1260 330" fill="none"
+        stroke="#F8FAFF" stroke-width="5" stroke-linecap="round" opacity=".55"/>
+  <path d="M640 720 C 760 560, 920 700, 1040 520 S 1180 300, 1260 330" fill="none"
+        stroke="#F8FAFF" stroke-width="2.5" stroke-linecap="round" opacity=".5"/>
+  <!-- 交會處發光 -->
+  <circle cx="905" cy="258" r="26" fill="#FFD166" opacity=".55" filter="url(#glow-ai-agents-cover)"/>
+  <circle cx="1002" cy="372" r="20" fill="#F8FAFF" opacity=".5" filter="url(#glow-ai-agents-cover)"/>
+  <!-- 切分音：間距不規則的光點 -->
+  <g fill="#F8FAFF" opacity=".7">
+    <circle cx="610" cy="70" r="3"/><circle cx="668" cy="46" r="2"/><circle cx="781" cy="84" r="4"/>
+    <circle cx="830" cy="560" r="3"/><circle cx="1096" cy="590" r="2.5"/><circle cx="1150" cy="480" r="3.5"/>
+  </g>
+  <!-- 刻意偏離網格的重點色 -->
+  <circle cx="1118" cy="148" r="11" fill="#C7B8FF"/>
+
+
+  <g font-family="'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif" fill="#F8FAFF">
+    <text x="72" y="96" font-size="22" font-weight="600" letter-spacing="3">TECHNOLOGY · AI AGENTS</text>
+    <rect x="72" y="116" width="64" height="6" rx="3" fill="#FFD166"/>
+    <text x="72" y="238" font-size="88" font-weight="800" opacity=".35"></text>
+    <text x="72" y="340" font-size="64" font-weight="800">AI Agents</text>
+    <text x="72" y="418" font-size="64" font-weight="800">一支接力隊</text>
+    <text x="72" y="486" font-size="26" opacity=".92">把開發流程交給專職 agent 與一位裁判</text>
+    <text x="72" y="570" font-size="24" font-weight="700" letter-spacing="1">Jazznoodles</text>
+  </g>
+
+
+  <g>
+    <circle cx="760" cy="300" r="46" fill="#F8FAFF"/>
+    <circle cx="900" cy="250" r="38" fill="#F8FAFF" opacity=".85"/>
+    <circle cx="1030" cy="330" r="30" fill="#F8FAFF" opacity=".7"/>
+    <rect x="800" y="288" width="64" height="12" rx="6" fill="#FFD166" transform="rotate(-18 832 294)"/>
+    <rect x="930" y="282" width="54" height="10" rx="5" fill="#FFD166" transform="rotate(20 957 287)"/>
+    <circle cx="900" cy="250" r="64" fill="none" stroke="#F8FAFF" stroke-width="3" stroke-dasharray="4 10" opacity=".8"/>
+    <rect x="700" y="470" width="400" height="6" rx="3" fill="#F8FAFF" opacity=".5"/>
+  </g>
+</svg>

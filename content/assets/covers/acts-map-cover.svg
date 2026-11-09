@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="行傳群島：使徒行傳互動式地圖封面">
+  <title>行傳群島：使徒行傳互動式地圖</title>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1E63D1"/>
+      <stop offset="1" stop-color="#6FB6FF"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#sky)"/>
+
+  <!-- 交織的光帶：旅程線 -->
+  <path d="M560 560 C 700 470, 760 330, 900 300 S 1100 160, 1150 80" fill="none" stroke="#FFD166" stroke-width="10" stroke-linecap="round" filter="url(#glow)"/>
+  <path d="M580 420 C 700 450, 800 380, 880 400 S 1040 470, 1160 420" fill="none" stroke="#F8FAFF" stroke-opacity="0.75" stroke-width="4" stroke-linecap="round"/>
+  <path d="M620 150 C 740 200, 780 280, 900 300 S 1060 340, 1170 250" fill="none" stroke="#F8FAFF" stroke-opacity="0.55" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- 站點：不規則間距 -->
+  <circle cx="900" cy="300" r="16" fill="#FFD166" filter="url(#glow)"/>
+  <circle cx="900" cy="300" r="30" fill="none" stroke="#FFD166" stroke-opacity="0.5" stroke-width="3"/>
+  <circle cx="702" cy="470" r="9" fill="#F8FAFF"/>
+  <circle cx="780" cy="372" r="7" fill="#F8FAFF"/>
+  <circle cx="1010" cy="226" r="8" fill="#F8FAFF"/>
+  <circle cx="1100" cy="150" r="6" fill="#F8FAFF"/>
+  <circle cx="1040" cy="440" r="8" fill="#F8FAFF" fill-opacity="0.85"/>
+  <!-- 偏離網格的重點色 -->
+  <circle cx="840" cy="130" r="14" fill="#C7B8FF"/>
+
+  <!-- 文字 -->
+  <text x="80" y="110" font-family="'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="24" font-weight="700" fill="#F8FAFF" letter-spacing="3">FAITH &amp; REFLECTION · LAB</text>
+  <text x="80" y="270" font-family="'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="96" font-weight="900" fill="#F8FAFF">跟著使徒</text>
+  <text x="80" y="385" font-family="'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="96" font-weight="900" fill="#F8FAFF">走一趟</text>
+  <text x="80" y="450" font-family="'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="30" fill="#F8FAFF">行傳群島 · 使徒行傳互動式地圖</text>
+  <text x="80" y="570" font-family="'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="26" font-weight="700" fill="#F8FAFF">Jazznoodles</text>
+</svg>

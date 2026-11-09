@@ -142,30 +142,33 @@ settings 也有類似分層（細節見 [[ccarf-03-config-layers|03]]）：`~/.c
 
 > [!question] 類題 04-1
 > 要找出整個 monorepo 裡所有呼叫 `legacyAuth.verify()` 的地方，以評估遷移範圍。最有效率的第一步是？
-> A. 把 `src/` 底下所有檔案用 Read 讀進來
-> B. 用 Glob 搜尋 `**/*legacyAuth*`
-> C. 用 Grep 搜尋 `legacyAuth.verify`，再 Read 命中的檔案
-> D. 直接開始修改，遇到錯誤再處理
+>
+> - A. 把 `src/` 底下所有檔案用 Read 讀進來
+> - B. 用 Glob 搜尋 `**/*legacyAuth*`
+> - C. 用 Grep 搜尋 `legacyAuth.verify`，再 Read 命中的檔案
+> - D. 直接開始修改，遇到錯誤再處理
 >
 > > [!tip]- 解析
 > > 答案 **C**。要找的是檔案**內容**中的呼叫，用 Grep；縮小範圍後才 Read。B 的 Glob 只比對檔名，找不到呼叫處。
 
 > [!question] 類題 04-2
 > 開發者要把付款服務從 REST 改成事件驅動，涉及十幾個服務與兩套資料庫遷移。下列哪個做法最合適？
-> A. 直接執行，邊做邊調整
-> B. 先進入 plan mode 探索依賴並提出計畫，核准後再執行
-> C. 開 plan mode，但只讓它改一個檔案試試
-> D. 請 Claude 一次改完，再靠測試把關
+>
+> - A. 直接執行，邊做邊調整
+> - B. 先進入 plan mode 探索依賴並提出計畫，核准後再執行
+> - C. 開 plan mode，但只讓它改一個檔案試試
+> - D. 請 Claude 一次改完，再靠測試把關
 >
 > > [!tip]- 解析
 > > 答案 **B**。範圍大、回頭代價高，先規劃。D 把風險全推給事後測試；A 的代價就是情境中的「改到一半才發現範圍」。
 
 > [!question] 類題 04-3
 > 團隊要讓所有人共用同一個 Sentry MCP server，每個人用各自的 token。下列哪個設定最合適？
-> A. 每人各自執行 `claude mcp add`，用預設範圍
-> B. 在專案 `.mcp.json` 設定，token 用 `${SENTRY_TOKEN}` 引用環境變數
-> C. 在專案 `.mcp.json` 直接寫入 token，大家共用
-> D. 設定在 `--scope user`，請同事複製
+>
+> - A. 每人各自執行 `claude mcp add`，用預設範圍
+> - B. 在專案 `.mcp.json` 設定，token 用 `${SENTRY_TOKEN}` 引用環境變數
+> - C. 在專案 `.mcp.json` 直接寫入 token，大家共用
+> - D. 設定在 `--scope user`，請同事複製
 >
 > > [!tip]- 解析
 > > 答案 **B**。project 範圍進版控共用，環境變數展開讓每人使用自己的 token。A、D 無法共用；C 洩漏密碼。

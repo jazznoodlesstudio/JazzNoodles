@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="560" viewBox="0 0 960 560" role="img" aria-label="上游一變，下游自動標成過期。指紋對不上就是 STALE；下游可以回報 NO_CHANGE">
+<title>上游一變，下游自動標成過期</title>
+<rect width="960" height="560" rx="20" fill="#F8FAFF" stroke="#6FB6FF" stroke-width="2"/>
+<rect x="40" y="40" width="10" height="34" rx="3" fill="#FFD166"/>
+<text x="64" y="68" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="30" font-weight="800" fill="#14284B" text-anchor="start">上游一變，下游自動標成過期</text>
+<text x="40" y="106" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="19" font-weight="400" fill="#5B6F8E" text-anchor="start">指紋對不上就是 STALE；下游可以回報 NO_CHANGE</text>
+<text x="40" y="530" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="18" font-weight="700" fill="#1E63D1" text-anchor="start">過期不等於重寫：先評估影響，再只改受影響章節</text>
+<rect x="40" y="160" width="190" height="84" rx="14" fill="#FFD166"/>
+<text x="135.0" y="200.0" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="20" font-weight="700" fill="#14284B" text-anchor="middle">PRD v2→v3</text>
+<text x="135.0" y="224.0" font-family="'JetBrains Mono','Consolas','Menlo',monospace" font-size="14" font-weight="400" fill="#14284B" text-anchor="middle" opacity="0.9">新增 FR-07</text>
+<line x1="232" y1="202" x2="252.0" y2="202.0" stroke="#14284B" stroke-width="2.5"/>
+<polygon points="263,202 252.0,208.0 252.0,196.0" fill="#14284B"/>
+<rect x="265" y="160" width="190" height="84" rx="14" fill="#6FB6FF"/>
+<text x="360.0" y="200.0" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="20" font-weight="700" fill="#14284B" text-anchor="middle">SA</text>
+<text x="360.0" y="224.0" font-family="'JetBrains Mono','Consolas','Menlo',monospace" font-size="14" font-weight="400" fill="#14284B" text-anchor="middle" opacity="0.9">指紋對不上 → STALE</text>
+<line x1="457" y1="202" x2="477.0" y2="202.0" stroke="#14284B" stroke-width="2.5"/>
+<polygon points="488,202 477.0,208.0 477.0,196.0" fill="#14284B"/>
+<rect x="490" y="160" width="190" height="84" rx="14" fill="#6FB6FF"/>
+<text x="585.0" y="200.0" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="20" font-weight="700" fill="#14284B" text-anchor="middle">SD</text>
+<text x="585.0" y="224.0" font-family="'JetBrains Mono','Consolas','Menlo',monospace" font-size="14" font-weight="400" fill="#14284B" text-anchor="middle" opacity="0.9">STALE</text>
+<line x1="682" y1="202" x2="702.0" y2="202.0" stroke="#14284B" stroke-width="2.5"/>
+<polygon points="713,202 702.0,208.0 702.0,196.0" fill="#14284B"/>
+<rect x="715" y="160" width="190" height="84" rx="14" fill="#6FB6FF"/>
+<text x="810.0" y="200.0" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="20" font-weight="700" fill="#14284B" text-anchor="middle">Code</text>
+<text x="810.0" y="224.0" font-family="'JetBrains Mono','Consolas','Menlo',monospace" font-size="14" font-weight="400" fill="#14284B" text-anchor="middle" opacity="0.9">STALE</text>
+<text x="480" y="282" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="16" font-weight="400" fill="#5B6F8E" text-anchor="middle">依拓撲順序一個一個派工；文件類更新後仍要人工核准</text>
+<rect x="40" y="330" width="400" height="100" rx="14" fill="#1E63D1"/>
+<text x="240.0" y="378.0" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="20" font-weight="700" fill="#F8FAFF" text-anchor="middle">sa-agent 評估影響</text>
+<text x="240.0" y="402.0" font-family="'JetBrains Mono','Consolas','Menlo',monospace" font-size="14" font-weight="400" fill="#F8FAFF" text-anchor="middle" opacity="0.9">附上游 diff＋「只改受影響章節」</text>
+<rect x="500" y="330" width="420" height="100" rx="14" fill="#E3EEFF"/>
+<text x="710.0" y="378.0" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="20" font-weight="700" fill="#14284B" text-anchor="middle">有影響：列受影響章節 → 更新</text>
+<text x="710.0" y="402.0" font-family="'JetBrains Mono','Consolas','Menlo',monospace" font-size="14" font-weight="400" fill="#14284B" text-anchor="middle" opacity="0.9">SA v3→v4 → 人工核准 → 往下傳</text>
+<rect x="500" y="450" width="420" height="52" rx="14" fill="#C7B8FF"/>
+<text x="710.0" y="483.0" font-family="'Noto Sans TC','Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="20" font-weight="700" fill="#14284B" text-anchor="middle">NO_CHANGE：只更新指紋、解除 STALE</text>
+<line x1="442" y1="360" x2="487.0" y2="360.0" stroke="#14284B" stroke-width="2.5"/>
+<polygon points="498,360 487.0,366.0 487.0,354.0" fill="#14284B"/>
+<line x1="442" y1="400" x2="491.1" y2="461.4" stroke="#14284B" stroke-width="2.5"/>
+<polygon points="498,470 486.4,465.2 495.8,457.7" fill="#14284B"/>
+</svg>

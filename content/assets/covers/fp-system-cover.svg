@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="CFP 全方位理財規劃系統封面">
+<title>CFP 全方位理財規劃系統</title>
+<defs>
+<linearGradient id="sky" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1E63D1"/><stop offset="1" stop-color="#6FB6FF"/></linearGradient>
+<filter id="glow"><feGaussianBlur stdDeviation="6"/></filter>
+</defs>
+<rect width="1200" height="630" fill="url(#sky)"/>
+<g fill="none" stroke-linecap="round">
+<path d="M560 560 C700 380 820 520 960 320 S1120 140 1180 90" stroke="#FFD166" stroke-width="14"/>
+<path d="M540 470 C680 300 800 420 940 250 S1100 120 1180 150" stroke="#F8FAFF" stroke-opacity=".75" stroke-width="5"/>
+<path d="M600 600 C740 470 860 560 1000 400 S1130 260 1190 300" stroke="#C7B8FF" stroke-width="3"/>
+</g>
+<circle cx="800" cy="440" r="14" fill="#FFD166" filter="url(#glow)"/><circle cx="800" cy="440" r="6" fill="#F8FAFF"/>
+<circle cx="948" cy="268" r="12" fill="#FFD166" filter="url(#glow)"/><circle cx="948" cy="268" r="5" fill="#F8FAFF"/>
+<circle cx="1090" cy="176" r="9" fill="#C7B8FF"/>
+<circle cx="700" cy="500" r="4" fill="#F8FAFF"/><circle cx="880" cy="380" r="3" fill="#F8FAFF"/><circle cx="1010" cy="330" r="5" fill="#F8FAFF"/>
+<g font-family="'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif" fill="#F8FAFF">
+<text x="70" y="110" font-size="24" letter-spacing="2">LAB · 理財規劃工具</text>
+<text x="70" y="270" font-size="68" font-weight="700">全方位理財</text>
+<text x="70" y="350" font-size="68" font-weight="700">規劃系統</text>
+<text x="70" y="420" font-size="28" opacity=".92">一個 HTML 檔，從面談到蒙地卡羅</text>
+<text x="70" y="570" font-size="26" font-weight="600">Jazznoodles</text>
+</g>
+</svg>

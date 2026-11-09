@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="跳著飛封面：先飛東南亞，再飛巴黎，四腳票最多省 16,744 元">
+<title>跳著飛 Jumpfly：四腳票封面</title>
+<defs>
+<linearGradient id="sky" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1E63D1"/><stop offset="1" stop-color="#6FB6FF"/></linearGradient>
+<filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="9"/></filter>
+</defs>
+<rect width="1200" height="630" fill="url(#sky)"/>
+<circle cx="1010" cy="330" r="260" fill="#F8FAFF" opacity="0.06"/>
+<circle cx="1120" cy="560" r="120" fill="#F8FAFF" opacity="0.07"/>
+<!-- noodle ribbons -->
+<path d="M620 560 C 760 600, 900 300, 1180 340" fill="none" stroke="#F8FAFF" stroke-width="3" opacity="0.55" stroke-linecap="round"/>
+<path d="M660 130 C 780 200, 840 420, 1190 470" fill="none" stroke="#C7B8FF" stroke-width="5" opacity="0.8" stroke-linecap="round"/>
+<path d="M700 610 C 820 520, 930 560, 1190 250" fill="none" stroke="#F8FAFF" stroke-width="1.6" opacity="0.4" stroke-linecap="round"/>
+<!-- glow at crossings -->
+<g fill="#FFD166" filter="url(#glow)" opacity="0.85">
+<circle cx="820" cy="300" r="26"/><circle cx="1050" cy="200" r="26"/><circle cx="960" cy="420" r="22"/>
+</g>
+<!-- four legs -->
+<g fill="none" stroke="#FFD166" stroke-linecap="round">
+<path d="M690 450 C 720 380, 760 330, 820 300" stroke-width="12"/>
+<path d="M820 300 C 900 260, 980 230, 1050 200" stroke-width="7"/>
+<path d="M1050 200 C 1100 270, 1040 360, 960 420" stroke-width="12"/>
+<path d="M960 420 C 1010 470, 1060 490, 1110 500" stroke-width="5"/>
+</g>
+<!-- nodes -->
+<g fill="#F8FAFF">
+<circle cx="690" cy="450" r="11"/><circle cx="820" cy="300" r="13"/><circle cx="1050" cy="200" r="13"/><circle cx="960" cy="420" r="11"/><circle cx="1110" cy="500" r="9"/>
+</g>
+<circle cx="1130" cy="110" r="14" fill="#C7B8FF"/>
+<g font-family="'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="20" fill="#F8FAFF" font-weight="700">
+<text x="652" y="492">外站</text><text x="780" y="338">台北</text><text x="1022" y="176">巴黎</text><text x="905" y="462">台北</text><text x="1074" y="540">外站</text>
+</g>
+<!-- text -->
+<g font-family="'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif" fill="#F8FAFF">
+<text x="72" y="118" font-size="22" font-weight="700" letter-spacing="3">LAB · 跳著飛 JUMPFLY</text>
+<text x="72" y="268" font-size="72" font-weight="800">先飛東南亞，</text>
+<text x="72" y="360" font-size="72" font-weight="800">再飛巴黎</text>
+<rect x="72" y="392" width="150" height="8" rx="4" fill="#FFD166"/>
+<text x="72" y="456" font-size="30">四腳票最多省 16,744 元</text>
+<text x="72" y="568" font-size="26" font-weight="700" letter-spacing="1">Jazznoodles</text>
+</g>
+</svg>

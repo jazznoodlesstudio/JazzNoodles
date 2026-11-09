@@ -208,10 +208,10 @@ def run_agent(user_input: str, tools: list, tool_impls: dict) -> str:
 >
 > 以下哪個修改**最能**解決問題？
 >
-> A. 把迭代上限從 10 輪調高到 30 輪
-> B. 在 system prompt 加上「完成所有工作前不要結束」
-> C. 改成依 `stop_reason` 判斷；`max_tokens` 時視為未完成並接著產生，`end_turn` 才結束
-> D. 偵測回應文字中是否出現「接下來」「稍後」等字眼，出現就自動再送一次「請繼續」
+> - A. 把迭代上限從 10 輪調高到 30 輪
+> - B. 在 system prompt 加上「完成所有工作前不要結束」
+> - C. 改成依 `stop_reason` 判斷；`max_tokens` 時視為未完成並接著產生，`end_turn` 才結束
+> - D. 偵測回應文字中是否出現「接下來」「稍後」等字眼，出現就自動再送一次「請繼續」
 >
 > > [!tip]- 解析
 > > **答案：C。**
@@ -223,10 +223,10 @@ def run_agent(user_input: str, tools: list, tool_impls: dict) -> str:
 >
 > 最合適的設計是？
 >
-> A. 在 `lookup_customer` 外層包一個無限重試迴圈，直到成功
-> B. 把錯誤以 `tool_result`（`is_error: true`）回傳，並在錯誤內容中說明「逾時，可重試」；同時保留迭代上限作為安全網
-> C. 遇到錯誤時改用另一個 agent 重新開始整個對話
-> D. 在 system prompt 列出所有可能的錯誤碼及處理方式
+> - A. 在 `lookup_customer` 外層包一個無限重試迴圈，直到成功
+> - B. 把錯誤以 `tool_result`（`is_error: true`）回傳，並在錯誤內容中說明「逾時，可重試」；同時保留迭代上限作為安全網
+> - C. 遇到錯誤時改用另一個 agent 重新開始整個對話
+> - D. 在 system prompt 列出所有可能的錯誤碼及處理方式
 >
 > > [!tip]- 解析
 > > **答案：B。**
@@ -236,10 +236,10 @@ def run_agent(user_input: str, tools: list, tool_impls: dict) -> str:
 > [!example] 自編類題 01-3
 > **情境**：客服 agent 偶爾因為達到輪數上限而結束，客戶沒有收到任何回覆，系統裡也沒有留下工單。哪個設計**最能**確保每個 session 都有結果？
 >
-> A. 把輪數上限從 15 調高到 50
-> B. 在 system prompt 寫「無法解決時一定要升級給真人」
-> C. 在 orchestration 層對任何非正常結束都建立升級工單，附上原因與已完成的步驟
-> D. 結束後再請模型自我評估任務是否完成
+> - A. 把輪數上限從 15 調高到 50
+> - B. 在 system prompt 寫「無法解決時一定要升級給真人」
+> - C. 在 orchestration 層對任何非正常結束都建立升級工單，附上原因與已完成的步驟
+> - D. 結束後再請模型自我評估任務是否完成
 >
 > > [!tip]- 解析
 > > **答案：C。**

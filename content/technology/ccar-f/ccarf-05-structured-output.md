@@ -171,30 +171,33 @@ Message Batches API 以非同步方式處理大量請求：
 
 > [!question] 類題 05-1
 > 某系統從合約擷取「簽署日、金額、對方公司」。偶爾回應前面多出「好的，以下是結果」，導致解析失敗。最可靠的修正是？
-> A. 在 system prompt 加上「禁止輸出任何前言」
-> B. 定義擷取工具與 `input_schema`，並以 `tool_choice` 強制呼叫該工具
-> C. 用正規表示式從回應中切出 JSON
-> D. 降低 temperature
+>
+> - A. 在 system prompt 加上「禁止輸出任何前言」
+> - B. 定義擷取工具與 `input_schema`，並以 `tool_choice` 強制呼叫該工具
+> - C. 用正規表示式從回應中切出 JSON
+> - D. 降低 temperature
 >
 > > [!tip]- 解析
 > > 答案 **B**。tool use ＋ schema ＋ 強制呼叫，讓輸出本身就是結構化資料。A、D 是請求或機率性緩解；C 是事後補救。
 
 > [!question] 類題 05-2
 > 擷取發票時，模型常為沒有「付款條件」的發票編造內容。最合適的 schema 修改是？
-> A. 把 `payment_terms` 設為必填，並在提示中強調不要編造
-> B. 將 `payment_terms` 設為可為 `null` 或非必填，並在欄位說明寫明「文件未提及時為 null」
-> C. 移除 `payment_terms` 欄位
-> D. 增加 `required` 欄位讓結構更嚴格
+>
+> - A. 把 `payment_terms` 設為必填，並在提示中強調不要編造
+> - B. 將 `payment_terms` 設為可為 `null` 或非必填，並在欄位說明寫明「文件未提及時為 null」
+> - C. 移除 `payment_terms` 欄位
+> - D. 增加 `required` 欄位讓結構更嚴格
 >
 > > [!tip]- 解析
 > > 答案 **B**。必填迫使模型填值，給它誠實回答「沒有」的出口才是根本解法。
 
 > [!question] 類題 05-3
 > 某團隊每週日夜間要重新分類 20 萬筆舊客服紀錄，週一早上用；另一個流程是每個 PR 合併前自動檢查程式碼。兩者各該用什麼？
-> A. 兩者都用同步 API
-> B. 兩者都用 Batches
-> C. 分類用 Batches，PR 檢查用同步 API
-> D. 分類用同步 API，PR 檢查用 Batches
+>
+> - A. 兩者都用同步 API
+> - B. 兩者都用 Batches
+> - C. 分類用 Batches，PR 檢查用同步 API
+> - D. 分類用同步 API，PR 檢查用 Batches
 >
 > > [!tip]- 解析
 > > 答案 **C**。分類可等到週一，用 Batches 省 50%；PR 檢查會卡住合併流程，需要同步結果。
