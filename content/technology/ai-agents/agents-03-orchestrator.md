@@ -1,24 +1,22 @@
 ---
-title: Orchestrator 不做事，只調度：STATE.json 與人工核准閘
+title: 接力隊筆記 03｜Orchestrator 不做事，只調度：STATE.json 與人工核准閘
 description: 換了一台電腦、開了新對話，AI 說專案「大概做到 SD」。真實進度其實在檔案裡，不在記憶裡。
 date: 2026-11-09
 tags:
   - multi-agent
   - claude-code
   - 系列/ai-agents
-series: ai-agents
+series: 接力隊筆記：SDLC Multi-Agent 開發流程
 order: 3
-draft: true
+draft: false
 ---
 
-![[agents-03-cover.svg]]
-
-# Orchestrator 不做事，只調度：STATE.json 與人工核准閘
+![[ai-agents-cover.svg]]
 
 > [!abstract] 這篇的重點
 > 接力賽需要裁判，但裁判不能下場跑。Orchestrator 的設計原則只有一句：**自己不產出任何東西，只讀狀態、決定下一步、派人、收結果、該停就停。** 所有進度都落在檔案裡，不放在對話記憶裡。
 
-## 換了一台電腦
+## 情境
 
 那天我在外面，用另一台電腦打開新對話，隨口問 AI：「專案現在做到哪了？」
 
@@ -27,6 +25,8 @@ draft: true
 我回到辦公室打開資料夾，SD 早就核准了，程式碼也寫到一半。
 
 AI 沒有說謊。它只是沒有別的辦法：它手上只有「對話裡出現過的片段」，真實狀態不在那裡。
+
+---
 
 ## 問題漏在哪
 
@@ -83,18 +83,9 @@ AI 沒有說謊。它只是沒有別的辦法：它手上只有「對話裡出�
 
 ### 零件三：該停和不該停的界線
 
-```mermaid
-stateDiagram-v2
-    PRD_DRAFT --> PRD_APPROVED: 人工核准
-    PRD_APPROVED --> SA_DRAFT
-    SA_DRAFT --> SA_APPROVED: 人工核准
-    SA_APPROVED --> SD_DRAFT
-    SD_DRAFT --> SD_APPROVED: 人工核准
-    SD_APPROVED --> DEVELOPING: 使用者確認進開發
-    DEVELOPING --> CODE_REVIEW
-    CODE_REVIEW --> DEVELOPING: 退回
-    CODE_REVIEW --> QA_TESTING: 通過
-```
+下圖是裁判每一圈的工作，以及哪裡該停、哪裡自動接力：
+
+![[agents-03-orchestrator.svg]]
 
 - **文件階段**（需求訪談、PRD、SA、SD）：每份產出後停下，呈現摘要與 diff，核准後才往下。文件錯了，後面蓋再多都白費，所以這裡值得停。
 - **開發之後**（Code Review、QA、自動化測試、Bug 循環）：自動接力，不逐步核准。這些階段有明確的驗收標準可以機械式判斷，不需要人在每一步簽名。
@@ -115,6 +106,8 @@ Orchestrator 讀了 `STATE.json`：`pipeline_state` 是 `QA_TESTING`，`SD` 為 
 
 我打開 `STATUS.md`，看板上的狀態和它說的一模一樣，因為兩者讀的是同一個檔案。
 
+---
+
 ## 速查表
 
 | 設計 | 解決的問題 | 容易搞混的地方 |
@@ -130,6 +123,14 @@ Orchestrator 讀了 `STATE.json`：`pipeline_state` 是 `QA_TESTING`，`SD` 為 
 
 ---
 
-上一篇：[[agents-02-change-propagation|產物依賴圖與變更傳播：上游變了，下游怎麼知道]]　｜　下一篇：[[agents-04-bug-upstream|Bug 的向上傳播：根因分級，避免文件變謊言]]
+## 延伸閱讀
+
+- 上一篇：[[agents-02-change-propagation|02｜產物依賴圖與變更傳播]]
+- 下一篇：[[agents-04-bug-upstream|04｜Bug 的向上傳播]]
+- 相關：[[token-05-checkpoints|檢查點與交接摘要]]
+
+## Sources
+
+- 本系列內容來自作者自行設計與實作的流程框架，沒有外部資料來源。
 
 *故事情境為綜合改編。*

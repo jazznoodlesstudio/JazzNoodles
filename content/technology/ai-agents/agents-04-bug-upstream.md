@@ -1,30 +1,30 @@
 ---
-title: Bug 的向上傳播：根因分級，避免文件變謊言
+title: 接力隊筆記 04｜Bug 的向上傳播：根因分級，避免文件變謊言
 description: 一個 bug 被悄悄修掉，程式碼對了，文件卻成了謊言。三個月後新人照著文件做，又做出同一個 bug。
 date: 2026-11-09
 tags:
   - multi-agent
   - claude-code
   - 系列/ai-agents
-series: ai-agents
+series: 接力隊筆記：SDLC Multi-Agent 開發流程
 order: 4
-draft: true
+draft: false
 ---
 
-![[agents-04-cover.svg]]
-
-# Bug 的向上傳播：根因分級，避免文件變謊言
+![[ai-agents-cover.svg]]
 
 > [!abstract] 這篇的重點
 > 修 bug 最危險的不是修不好，而是**只改程式碼就收工**。每張 bug 單都要先問一句：錯在哪一層？錯在設計或需求，就要回到上游改文件，再往下重新傳播。
 
-## 三個月後的新人
+## 情境
 
 阿哲有一天很無奈地跟我說，新來的同事照著 PRD 實作了一個功能，上線後被客訴。
 
 我們查了一下：這個行為，三個月前其實已經被當成 bug 修掉了。但當時修的人只改了程式碼，讓它「合理地」不同於 PRD 的寫法。PRD 和系統設計文件一個字都沒動。
 
 程式碼是對的，文件變成了謊言。新人沒有做錯，他只是相信了文件。
+
+---
 
 ## 問題漏在哪
 
@@ -49,18 +49,7 @@ draft: true
 
 這張表串起了前一篇的變更傳播。bug 往上走到被修正的那一層，之後就是同一套「標 STALE、依序更新」的機制，文件和程式碼才會一起回到一致。
 
-```mermaid
-flowchart TD
-    BUG[Bug 單] --> RC{根因分級}
-    RC -- 實作錯誤 --> FIX[修程式碼]
-    FIX --> CR[Code Review]
-    CR --> REG[回歸測試]
-    RC -- 設計錯誤 --> SDX[sd-agent 修 SD] --> APP1{人工核准} --> PROP[變更傳播往下重跑]
-    RC -- 需求錯誤 --> USR[升級使用者確認] --> PRDX[從 PRD/SA 重跑] --> PROP
-    REG --> ORC{Orchestrator 確認全綠}
-    PROP --> REG
-    ORC --> CLOSE[關單]
-```
+![[agents-04-rootcause.svg]]
 
 ### 兩條紀律
 
@@ -109,6 +98,8 @@ transition(issue_key, status)
 
 三個月後新人照著 PRD 做，做出來的就是對的。
 
+---
+
 ## 速查表
 
 | 根因 | 誰來修 | 修完之後 |
@@ -122,6 +113,13 @@ transition(issue_key, status)
 
 ---
 
-上一篇：[[agents-03-orchestrator|Orchestrator 不做事，只調度：STATE.json 與人工核准閘]]　｜　下一篇：[[agents-05-portability|可遷移性四規則：從 Claude Code subagents 到 Agent SDK]]
+## 延伸閱讀
+
+- 上一篇：[[agents-03-orchestrator|03｜Orchestrator 不做事，只調度]]
+- 下一篇：[[agents-05-portability|05｜可遷移性四規則]]
+
+## Sources
+
+- 本系列內容來自作者自行設計與實作的流程框架，沒有外部資料來源。
 
 *故事情境為綜合改編。*

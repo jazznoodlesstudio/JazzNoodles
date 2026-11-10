@@ -1,24 +1,22 @@
 ---
-title: 為什麼要把 SDLC 拆成專職 agent
+title: 接力隊筆記 01｜為什麼要把 SDLC 拆成專職 agent
 description: 一個 AI 從 PRD 寫到手冊，聽起來很省事，直到小安發現第三十行的欄位名稱對不上。
 date: 2026-11-09
 tags:
   - multi-agent
   - claude-code
   - 系列/ai-agents
-series: ai-agents
+series: 接力隊筆記：SDLC Multi-Agent 開發流程
 order: 1
-draft: true
+draft: false
 ---
 
-![[agents-01-cover.svg]]
-
-# 為什麼要把 SDLC 拆成專職 agent
+![[ai-agents-cover.svg]]
 
 > [!abstract] 這篇的重點
 > 一個 agent 從頭做到尾，問題不在它不夠聰明，而在**沒有人能檢查它**。拆成專職 agent，加上「只讀自己的輸入、只寫自己的輸出」的規則，才有可以被驗收的接力點。
 
-## 一個週五下午
+## 情境
 
 那天下午，我把需求丟給 AI：「從 PRD 一路做到使用者手冊，一次做完。」
 
@@ -29,6 +27,8 @@ draft: true
 我問 AI 為什麼不一致。它很誠懇地回答：「寫到後面我調整了想法。」
 
 我沒辦法生氣。它確實調整了，只是沒有任何人、任何機制知道它調整了。
+
+---
 
 ## 問題漏在哪
 
@@ -88,6 +88,8 @@ tools: Read, Write, Edit, Grep, Glob
 
 這才是我想要的對話：討論需求，不是抓不一致。
 
+---
+
 ## 速查表
 
 | 做法 | 對應的原理 |
@@ -103,6 +105,13 @@ tools: Read, Write, Edit, Grep, Glob
 
 ---
 
-上一篇：（系列第一篇）　｜　下一篇：[[agents-02-change-propagation|產物依賴圖與變更傳播：上游變了，下游怎麼知道]]
+## 延伸閱讀
+
+- 上一篇：[[agents-00-guide|00｜導讀：把開發流程交給一支接力隊]]
+- 下一篇：[[agents-02-change-propagation|02｜產物依賴圖與變更傳播]]
+
+## Sources
+
+- 本系列內容來自作者自行設計與實作的流程框架，沒有外部資料來源。
 
 *故事情境為綜合改編。*

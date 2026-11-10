@@ -1,30 +1,30 @@
 ---
-title: 可遷移性四規則：從 Claude Code subagents 到 Agent SDK
+title: 接力隊筆記 05｜可遷移性四規則：從 Claude Code subagents 到 Agent SDK
 description: 小米問：「這套只能在你的電腦、你的 Claude Code 上跑嗎？」答案取決於一開始有沒有遵守四條規則。
 date: 2026-11-09
 tags:
   - multi-agent
   - claude-code
   - 系列/ai-agents
-series: ai-agents
+series: 接力隊筆記：SDLC Multi-Agent 開發流程
 order: 5
-draft: true
+draft: false
 ---
 
-![[agents-05-cover.svg]]
-
-# 可遷移性四規則：從 Claude Code subagents 到 Agent SDK
+![[ai-agents-cover.svg]]
 
 > [!abstract] 這篇的重點
 > 平台會換，但資產不該跟著丟。我把整套設計限制在四條規則內，讓階段 1 到階段 2 的遷移，==只換外殼，不換資產==。
 
-## 小米的問題
+## 情境
 
 小米看完整套流程，問了一句很實際的話：「這是不是只有在你的電腦上，用你開的那個 Claude Code session 才跑得起來？」
 
 我愣了一下。因為我一開始確實是這樣用的：階段 1 是在 Claude Code 裡，用 subagents 和一個 skill 把流水線跑起來。
 
 如果哪天想讓它變成常駐服務，被 webhook 叫醒、核准透過通知，而不是我坐在終端機前，那些 agent、那些狀態，能不能直接搬過去？
+
+---
 
 ## 問題漏在哪
 
@@ -53,20 +53,7 @@ Jira、以及未來的 CI、部署，一律介面化。切換只改設定，不�
 
 ## 階段 1 到階段 2：要換什麼，不換什麼
 
-```mermaid
-flowchart LR
-    subgraph 不換[資產：不動]
-        A1[agents/*.md]
-        A2[STATE.json 與產物]
-        A3[adapter 介面]
-    end
-    subgraph 換[外殼：階段 2 新寫]
-        B1[SDK query 調度迴圈]
-        B2[webhook / cron 觸發]
-        B3[核准的通知介面<br/>Slack / 網頁]
-    end
-    不換 --> 換
-```
+![[agents-05-layers.svg]]
 
 | | 階段 1 | 階段 2 |
 |---|---|---|
@@ -116,6 +103,8 @@ flowchart LR
 
 沒錯，這就是這套設計想要的樣子。
 
+---
+
 ## 速查表
 
 | 規則 | 遷移時省掉什麼 | 如果違反會怎樣 |
@@ -130,6 +119,13 @@ flowchart LR
 
 ---
 
-上一篇：[[agents-04-bug-upstream|Bug 的向上傳播：根因分級，避免文件變謊言]]　｜　下一篇：（番外篇：與 AWS AI-DLC 對照，撰寫中）
+## 延伸閱讀
+
+- 上一篇：[[agents-04-bug-upstream|04｜Bug 的向上傳播]]
+- 下一篇：番外篇「與 AWS AI-DLC 對照」（撰寫中）
+
+## Sources
+
+- 本系列內容來自作者自行設計與實作的流程框架，沒有外部資料來源。
 
 *故事情境為綜合改編。*

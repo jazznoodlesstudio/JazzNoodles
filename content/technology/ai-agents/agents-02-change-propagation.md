@@ -1,24 +1,22 @@
 ---
-title: 產物依賴圖與變更傳播：上游變了，下游怎麼知道
+title: 接力隊筆記 02｜產物依賴圖與變更傳播：上游變了，下游怎麼知道
 description: PRD 在站會上被口頭加了一條需求，兩週後 QA 才發現 SA 根本不知道。靠人記得，一定會漏。
 date: 2026-11-09
 tags:
   - multi-agent
   - claude-code
   - 系列/ai-agents
-series: ai-agents
+series: 接力隊筆記：SDLC Multi-Agent 開發流程
 order: 2
-draft: true
+draft: false
 ---
 
-![[agents-02-cover.svg]]
-
-# 產物依賴圖與變更傳播：上游變了，下游怎麼知道
+![[ai-agents-cover.svg]]
 
 > [!abstract] 這篇的重點
 > 接力賽最怕的不是選手跑得慢，而是**棒子被換了，下一棒還拿著舊的**。解法是替每個產物記下「我是依據哪一版上游做的」，上游一變，下游自動被標成過期。
 
-## 站會上的一句話
+## 情境
 
 站會上，產品負責人隨口說：「匯出功能順便加上 CSV 好了。」
 
@@ -27,6 +25,8 @@ draft: true
 兩週後，QA 測匯出功能，發現系統設計文件裡根本沒有 CSV 的資料流，程式碼也沒有。小安說：「沒有人告訴我 PRD 改了。」
 
 他沒有說錯。PRD 改了，SA 沒改，SD 沒改，程式碼當然更沒改。三份文件各自停在不同的時間點。
+
+---
 
 ## 問題漏在哪
 
@@ -97,19 +97,7 @@ MARKET-SURVEY ─→ INTAKE ─→ PRD ─→ SA ─→ SD ─→ Code ─→ �
 
 沒有這一步，每次上游動一個標點，下游都要重寫一遍，這就是前面說的雪崩。
 
-```mermaid
-flowchart TD
-    A[PRD v2→v3<br/>新增 FR-07] --> B[SA 標 STALE]
-    B --> C{sa-agent 評估}
-    C -- 新增 UC-9 --> D[SA v3→v4] --> E{人工核准}
-    E --> F[SD 標 STALE → 新增 /export]
-    F --> G{人工核准}
-    G --> H[Code 標 STALE → 實作]
-    H --> I[Code Review → QA 只補 FR-07 案例]
-    I --> J[自動化測試補測試]
-    I --> K[手冊補章節]
-    C -- NO_CHANGE --> L[更新指紋，解除 STALE]
-```
+![[agents-02-propagation.svg]]
 
 ## 改完之後
 
@@ -129,6 +117,8 @@ sa-agent 收到任務，列出受影響章節，只新增一個 use case，SA �
 > - **`NO_CHANGE` 可能判錯。** 下游判斷「不受影響」若判錯，就會漏更新。我打算在 QA 階段加一致性抽查：比對文件與程式行為。
 > - **文件膨脹後，粒度不夠細。** 實戰中 SA 曾長成多冊，一冊一個指紋太粗，變更傳播的粒度需要更細的約定。
 
+---
+
 ## 速查表
 
 | 機制 | 解決的問題 | 容易搞混的地方 |
@@ -144,6 +134,13 @@ sa-agent 收到任務，列出受影響章節，只新增一個 use case，SA �
 
 ---
 
-上一篇：[[agents-01-why-specialist|為什麼要把 SDLC 拆成專職 agent]]　｜　下一篇：[[agents-03-orchestrator|Orchestrator 不做事，只調度：STATE.json 與人工核准閘]]
+## 延伸閱讀
+
+- 上一篇：[[agents-01-why-specialist|01｜為什麼要把 SDLC 拆成專職 agent]]
+- 下一篇：[[agents-03-orchestrator|03｜Orchestrator 不做事，只調度]]
+
+## Sources
+
+- 本系列內容來自作者自行設計與實作的流程框架，沒有外部資料來源。
 
 *故事情境為綜合改編。*
